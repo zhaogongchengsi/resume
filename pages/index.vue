@@ -1,9 +1,8 @@
 <script setup lang="ts">
-const online = useOnline()
 </script>
 
 <template>
-  <div>
+  <div class="resume-container mx-auto">
     <!-- <Logos mb-6 /> -->
     resume
   </div>
