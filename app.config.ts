@@ -1,6 +1,16 @@
-export default defineAppConfig({
-  title: 'Hello App Config',
-  description:
-    'This is some content coming from app.config.ts that support HMR, try to update it and see it in action.',
-  showButton: false,
-})
+import type { Resume } from './types'
+
+const resume: Resume = {
+  title: 'zhaogongchengsi',
+  introduce: 'abc',
+  avatar: '/vite.png',
+  github: 'https://github.com/zhaogongchengsi/resume',
+  social: [
+    {
+      name: 'GitHub',
+      link: 'https://github.com/zhaogongchengsi',
+    },
+  ],
+}
+
+export default defineAppConfig<{}>(resume)
