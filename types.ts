@@ -10,4 +10,6 @@ export interface Resume {
   avatar?: string
   github?: string
   social?: Social[]
+  occupation?: string[]
+  tags?: string[]
 }
