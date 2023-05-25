@@ -32,11 +32,6 @@ export default defineNuxtConfig({
         target: 'esnext',
       },
     },
-    prerender: {
-      crawlLinks: false,
-      routes: ['/'],
-      ignore: ['/hi'],
-    },
   },
 
   app: {
@@ -53,6 +48,10 @@ export default defineNuxtConfig({
         { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
       ],
     },
+  },
+
+  imports: {
+    dirs: ['views'],
   },
 
   pwa,
