@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import Header from '~/components/Header.vue'
+
+function onMenuHandler() {
+}
 </script>
 
 <template>
@@ -14,7 +17,12 @@ import Header from '~/components/Header.vue'
       </template>
     </Header>
   </header>
-  <main class="mx-auto resume-container">
-    <slot />
+  <main class="mx-auto flex justify-center resume-container">
+    <article class="flex-1">
+      <slot />
+    </article>
+    <aside class="w-70">
+      Aside
+    </aside>
   </main>
 </template>
