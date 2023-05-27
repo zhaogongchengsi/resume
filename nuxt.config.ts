@@ -18,6 +18,7 @@ export default defineNuxtConfig({
 
   css: [
     '@unocss/reset/tailwind.css',
+    '~/assets/main.scss',
   ],
 
   colorMode: {
@@ -54,7 +55,10 @@ export default defineNuxtConfig({
 
   content: {
     highlight: {
-      theme: 'github-light',
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      },
       preload: [
         'js',
         'ts',

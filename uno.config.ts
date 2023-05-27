@@ -24,7 +24,17 @@ export default defineConfig({
     presetIcons({
       scale: 1.2,
     }),
-    presetTypography(),
+    presetTypography({
+      cssExtend: {
+        pre: {
+          'padding': '1.25rem 1.5rem',
+          'overflow-x': 'auto',
+          'border-radius': '.375rem',
+          'backgroud-color': 'red',
+          'border': '1px solid var(--pre-border-color)',
+        },
+      },
+    }),
     presetWebFonts({
       fonts: {
         sans: 'DM Sans',

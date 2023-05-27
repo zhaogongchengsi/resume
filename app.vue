@@ -13,14 +13,5 @@ useHead({
 </template>
 
 <style>
-html, body , #__nuxt{
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-}
 
-html.dark {
-  background: #222;
-  color: white;
-}
 </style>

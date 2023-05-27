@@ -23,3 +23,27 @@ console.log('hello world')
 ::card
 The content of the card
 ::
+
+
+```css
+html,
+body,
+#__nuxt {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+html.dark {
+    background: #222;
+    color: white;
+}
+
+html:not(.dark) {
+    --pre-border-color: rgb(99, 99, 99);
+}
+
+html:not(.light) {
+    --pre-border-color: #7a7a7a;
+}
+```
