@@ -7,7 +7,7 @@ const { title, tags } = useResume()
     <div class="w-full flex flex-col items-center px-3 md:w-1/2 md:items-start md:px-0">
       <p class="text-center">
         <span class="mr-1 text-12 font-semibold text-purple-700 2xl:text-25 lg:text-15 xl:text-20 dark:text-purple-400">Hi</span>
-        <span class="text-7">, i' m</span>
+        <span class="text-7 md:text-10">, i' m</span>
       </p>
       <h2 class="from-violet-500 to-fuchsia-500 bg-gradient-to-r bg-clip-text text-center text-8 font-semibold uppercase text-transparent lg:text-12 md:text-10 xl:text-15">
         {{ title }}
