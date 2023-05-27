@@ -17,7 +17,7 @@ function onMenuHandler() {
       </template>
     </Header>
   </header>
-  <main class="mx-auto flex justify-center resume-container">
+  <main class="mx-auto flex flex-1 justify-center resume-container">
     <article class="flex-1">
       <slot />
     </article>

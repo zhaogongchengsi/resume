@@ -11,5 +11,3 @@ definePageMeta({
     <ContentDoc path="/" />
   </div>
 </template>
-
-<style lang='scss'></style>
