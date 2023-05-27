@@ -1,4 +1,3 @@
-import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
 
 export default defineNuxtConfig({
@@ -8,11 +7,10 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
+    '@nuxt/content',
   ],
 
   experimental: {
-    // when using generate, payload js assets included in sw precache manifest
-    // but missing on offline, disabling extraction it until fixed
     payloadExtraction: false,
     inlineSSRStyles: false,
     renderJsonPayloads: true,
@@ -54,7 +52,18 @@ export default defineNuxtConfig({
     dirs: ['views'],
   },
 
-  pwa,
+  content: {
+    highlight: {
+      theme: 'github-light',
+      preload: [
+        'js',
+        'ts',
+        'css',
+        'html',
+        'shell',
+      ],
+    },
+  },
 
   devtools: {
     enabled: true,
