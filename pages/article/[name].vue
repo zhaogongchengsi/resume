@@ -7,7 +7,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="text-base prose prose-truegray xl:text-xl dark:prose-invert">
+  <div class="max-w-full text-base prose prose-truegray w-full! xl:text-xl dark:prose-invert">
     <ContentDoc path="/" />
   </div>
 </template>

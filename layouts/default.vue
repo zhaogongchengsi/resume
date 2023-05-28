@@ -8,7 +8,7 @@ import Header from '~/components/Header.vue'
     <img class="h-full w-full light:hidden" src="/bg-dark.png" alt="">
   </div>
   <header class="sticky top-0 mx-auto resume-container">
-    <Header is-menu @click-menu="onMenuHandler">
+    <Header>
       <template #logo>
         <a href="/">Z</a>
       </template>
