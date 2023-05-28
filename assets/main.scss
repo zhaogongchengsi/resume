@@ -11,10 +11,20 @@ html.dark {
     color: white;
 }
 
+
+html {
+    --header-bg-filter: saturate(200%) blur(20px);
+}
+// 白色
 html:not(.dark) {
     --pre-border-color: rgb(99, 99, 99);
+    --header-bg-color: #fffc;
+    --header-border-color: #ECEBE8;
 }
 
+// 黑色
 html:not(.light) {
     --pre-border-color: #7a7a7a;
+    --header-bg-color: #0c0d0ccc;
+    --header-border-color:#121110;
 }

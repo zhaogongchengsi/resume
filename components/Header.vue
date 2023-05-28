@@ -10,7 +10,7 @@ const { github } = useAppConfig() as any
 const isTop = computed(() => {
   // todo: 当滚动条不在最顶上时，给header 一个遮罩
   if (y.value > 0)
-    return 'top'
+    return 'header-suspension'
 
   else
     return ''
@@ -22,7 +22,7 @@ function clickMenu() {
 </script>
 
 <template>
-  <div class="mx-auto flex items-center justify-between py-4 md:py-6" :class="isTop">
+  <div class="mx-auto flex items-center justify-between rounded-md px-2 py-4 md:py-6" :class="isTop">
     <h1 class="text-lg md:text-2xl">
       <slot name="logo">
         <span>Z</span>
@@ -36,4 +36,10 @@ function clickMenu() {
   </div>
 </template>
 
-<style lang='scss'></style>
+<style lang='scss'>
+.header-suspension {
+  background: var(--header-bg-color);
+  backdrop-filter: var(--header-bg-filter);
+  border: 1px solid var(--header-border-color);
+}
+</style>

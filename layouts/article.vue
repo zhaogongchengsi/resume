@@ -1,17 +1,11 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { useWindowSize } from '@vueuse/core'
+import { ref } from 'vue'
 import Header from '~/components/Header.vue'
 
 const isShow = ref(false)
-const { width } = useWindowSize()
-
-const asideShow = computed(() => {
-  if (width.value > 780)
-    return true
-
-  return isShow.value
-})
+function clickSelf() {
+  isShow.value = false
+}
 
 function onMenuHandler() {
   isShow.value = !isShow.value
@@ -34,9 +28,9 @@ function onMenuHandler() {
     <article class="flex-1">
       <slot />
     </article>
-    <aside class="fixed left-0 top-0 hidden h-screen w-full bg-gray-900/70 md:static md:w-70 md:bg-transparent" :class="{ 'block!': asideShow }" @click.self="isShow = !isShow">
+    <aside class="fixed left-0 top-0 hidden h-screen w-full bg-gray-900/70 md:static md:w-70 md:bg-transparent md:block!" :class="{ 'block!': isShow }" @click.self=" clickSelf ">
       <Transition>
-        <nav v-show="asideShow" class="px-3 py-10 md:p-0">
+        <nav v-show="isShow" class="px-3 py-10 md:p-0 md:block!">
           <ContentNavigation v-slot="{ navigation }">
             <ul>
               <li v-for="link of navigation" :key="link._path">
