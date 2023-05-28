@@ -22,7 +22,7 @@ function clickMenu() {
 </script>
 
 <template>
-  <div class="mx-auto flex items-center justify-between rounded-md px-2 py-4 md:py-6" :class="isTop">
+  <div class="mx-auto flex items-center justify-between rounded-md px-2 py-2 md:py-4.5 sm:py-4" :class="isTop">
     <h1 class="text-lg md:text-2xl">
       <slot name="logo">
         <span>Z</span>
