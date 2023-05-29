@@ -1,5 +1,6 @@
 import { assembleGithubRepoContentUrl, assembleGithubRepoUrl, assembleGithubRepolanguages } from './assemble'
 import { getGitHub } from './request'
+import type { GitHubRepoInfo } from '~/types'
 import { useResume } from '~/composables/resume'
 
 export async function useRepositories() {
@@ -23,7 +24,7 @@ export async function getGitHubRepoReadmeContent(repo: string) {
   return Buffer.from(res.content, 'base64').toString()
 }
 
-export async function getGitHubRepoInfo(repo: string) {
+export async function getGitHubRepoInfo(repo: string): Promise<GitHubRepoInfo> {
   const { name } = useResume().github
   const res: any = await getGitHub(assembleGithubRepoUrl(name, repo))
 

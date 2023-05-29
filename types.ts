@@ -40,3 +40,14 @@ export interface Links {
   html: string
   self: string
 }
+
+export type language = 'Vue' | 'TypeScript' | 'Go' | 'JavaScript' | 'Scss' | 'Css'
+
+export interface GitHubRepoInfo {
+  description: string
+  language: language
+  link: string
+  homepage: string
+}
+
+export type languages = Partial<Record<language, number>>
