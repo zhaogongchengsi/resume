@@ -55,6 +55,7 @@ export default defineNuxtConfig({
         'shell',
       ],
     },
+    documentDriven: true,
   },
 
   devServer: {
