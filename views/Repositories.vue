@@ -4,7 +4,9 @@ console.log(repos.data)
 </script>
 
 <template>
-  <div>123123</div>
+  <section class="grid my-4 lg:my-8 md:my-6 xl:my-10">
+    213
+  </section>
 </template>
 
 <style lang='scss'></style>
