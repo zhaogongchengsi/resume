@@ -18,7 +18,7 @@ html {
 // 白色
 html:not(.dark) {
     --pre-border-color: rgb(99, 99, 99);
-    --header-bg-color: #fffc;
+    --header-bg-color: rgba(255, 255, 255, 0.623);
     --header-border-color: #ECEBE8;
 }
 

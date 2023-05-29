@@ -31,7 +31,7 @@ function clickMenu() {
     <div class="flex items-center gap-3">
       <a v-if="github" target="_blank" :href="github" class="block icon-default"> <div class="i-carbon-logo-github icon-btn icon-default" /> </a>
       <DarkToggle class="icon-btn icon-default" />
-      <button v-if="props.isMenu" class="i-tabler-menu-2 icon-large block icon-btn md:hidden" @click="clickMenu" />
+      <button v-if="props.isMenu" class="icon-large i-tabler-menu-2 block icon-btn md:hidden" @click="clickMenu" />
     </div>
   </div>
 </template>
