@@ -45,6 +45,3 @@ function onMenuHandler() {
     </aside>
   </main>
 </template>
-
-<style>
-</style>

@@ -7,10 +7,10 @@ export async function useRepositories() {
 
   const response = []
   for (const repo of repositories || []) {
-    const readmeContent = await getGitHubRepoReadmeContent(repo)
+    if (repo.trim().length < 1)
+      continue
     const info = await getGitHubRepoInfo(repo)
-    const languages = await getGitHubRepolanguages(repo)
-    response.push({ repository: repo, readme: readmeContent, ...info, languages })
+    response.push({ repository: repo, ...info })
   }
 
   return response
@@ -30,6 +30,8 @@ export async function getGitHubRepoInfo(repo: string) {
   return {
     description: res.description,
     language: res.language,
+    link: res.html_url,
+    homepage: res.homepage,
   }
 }
 

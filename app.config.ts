@@ -7,7 +7,7 @@ const resume: Resume = {
   avatar: '/vite.png',
   github: {
     link: 'https://github.com/zhaogongchengsi/resume',
-    repositories: ['vite-plugin-pages-generate-router'],
+    repositories: ['vite-plugin-pages-generate-router', 'zzh-vs-theme', 'create-electron-app', 'starter-vue', 'starter-gin'],
     name: 'zhaogongchengsi',
   },
   social: [
