@@ -1,9 +1,20 @@
 import type { languages } from '~/types'
+import { useResume } from '~/composables/resume'
 
 const ls: languages[] = [{ TypeScript: 1231, JavaScript: 123 }, { TypeScript: 1231, Vue: 123, Css: 123 }, { Scss: 1231, JavaScript: 123 }]
 
 export default defineEventHandler(async () => {
-  return statisticsLanguages(ls)
+  const { repositories } = useResume().github
+
+  const response: languages[] = []
+  for (const repo of repositories || []) {
+    if (repo.trim().length < 1)
+      continue
+    const info = await getGitHubRepolanguages(repo)
+    response.push(info)
+  }
+
+  return statisticsLanguages(response)
 })
 
 function statisticsLanguages(ls: languages[]): languages {

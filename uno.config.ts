@@ -47,4 +47,5 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
+  include: ['./constants/*', 'pages/*', './components/*', './composables/*', './views/*', './layouts/*', './content/*'],
 })
