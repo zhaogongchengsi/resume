@@ -50,4 +50,8 @@ export interface GitHubRepoInfo {
   homepage: string
 }
 
+export interface RepoResponse extends GitHubRepoInfo {
+  repository: string
+}
+
 export type languages = Partial<Record<language, number>>

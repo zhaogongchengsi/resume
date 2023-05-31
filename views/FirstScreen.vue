@@ -25,13 +25,15 @@ const { title, tags } = useResume()
         </li>
       </ol>
 
-      <LinkButton class="mt-7" icon="i-tabler-address-book">
-        联系我
-      </LinkButton>
+      <div class="flex gap-4 lg:gap-6">
+        <LinkButton class="mt-7" icon="i-tabler-address-book">
+          联系我
+        </LinkButton>
 
-      <LinkButton class="mt-7" icon="i-tabler-bat" link="article/index">
-        查看文章
-      </LinkButton>
+        <LinkButton class="mt-7" icon="i-tabler-bat" link="article/index">
+          查看文章
+        </LinkButton>
+      </div>
     </div>
     <div class="flex items-center justify-center sm:w-1/2">
       <img class="w-50 lg:w-120 md:w-100 sm:w-80" src="/home.png" alt="Web Html ">

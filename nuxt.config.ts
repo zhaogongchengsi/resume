@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
     '~/assets/main.scss',
+    'swiper/css',
   ],
 
   colorMode: {
@@ -37,9 +38,16 @@ export default defineNuxtConfig({
     head,
   },
 
-  imports: {
-    dirs: ['views'],
+  components: {
+    dirs: [{
+      path: '~/views',
+      global: true,
+    }, '~/components'],
   },
+
+  // imports: {
+  //   dirs: [''],
+  // },
 
   content: {
     highlight: {
