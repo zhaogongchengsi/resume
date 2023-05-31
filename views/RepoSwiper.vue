@@ -8,11 +8,23 @@ const props = withDefaults(defineProps<{ data?: RepoResponse[] }>(), { data: () 
 <template>
   <div>
     <Swiper
-      :slides-per-view="3"
-      :space-between="50"
+      :slides-per-view="2"
+      :space-between="20"
+      :breakpoints="{
+        780: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      }"
     >
       <SwiperSlide v-for="item of props.data" :key="item.repository">
-        <RepoCard :repo="item" />
+        <div class="p-2 md:p-3">
+          <RepoCard :repo="item" />
+        </div>
       </SwiperSlide>
     </Swiper>
   </div>
