@@ -33,7 +33,7 @@ function onCloneHandler() {
 </script>
 
 <template>
-  <div class="a-border a-shadow group/card relative h-40 w-full">
+  <div class="group/card relative h-40 w-full a-border a-shadow">
     <div class="h-full w-full flex flex-col p-2 md:p-3">
       <h3 class="truncate text-5 font-semibold md:text-6" :title="repo.repository">
         {{ repo.repository }}
@@ -49,7 +49,7 @@ function onCloneHandler() {
         </a>
       </div>
     </div>
-    <div :title="clone" class="a-glass absolute right-0 top-0 hidden cursor-pointer items-center gap-2 rounded px-3 py-1 group-hover/card:flex md:rounded-md" @click="onCloneHandler">
+    <div :title="clone" class="absolute right-0 top-0 hidden cursor-pointer items-center gap-2 rounded a-glass px-3 py-1 group-hover/card:flex md:rounded-md" @click="onCloneHandler">
       <div v-if="!copied" class="i-tabler-command h-4 w-4" />
       <div v-else class="i-tabler-check h-4 w-4" />
       <span>clone</span>
