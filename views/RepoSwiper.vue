@@ -8,15 +8,15 @@ const props = withDefaults(defineProps<{ data?: RepoResponse[] }>(), { data: () 
 <template>
   <div>
     <Swiper
-      :slides-per-view="2"
-      :space-between="20"
+      :slides-per-view="1"
+      :space-between="10"
       :breakpoints="{
         780: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 20,
         },
-        1280: {
-          slidesPerView: 4,
+        1100: {
+          slidesPerView: 3,
           spaceBetween: 30,
         },
       }"
