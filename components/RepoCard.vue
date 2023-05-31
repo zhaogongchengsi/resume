@@ -21,26 +21,39 @@ const config = computed(() => {
     return conf.name === repo.language
   })
 })
+const { copy, copied } = useClipboard()
 
 const clone = computed(() => {
-  return `https://github.com/${github.name}/${repo.repository}`
+  return `git clone https://github.com/${github.name}/${repo.repository}.git`
 })
+
+function onCloneHandler() {
+  copy(clone.value)
+}
 </script>
 
 <template>
-  <div class="a-border a-shadow h-40 w-full">
-    <a :href="link" target="_blank" class="h-full w-full flex flex-col p-2 md:p-3">
-      <h3 class="truncate text-5 font-semibold md:text-6" :title="repo.repository">{{ repo.repository }}</h3>
-      <p class="line-clamp-4 my-auto">{{ repo.description }}</p>
+  <div class="a-border a-shadow group/card relative h-40 w-full">
+    <div class="h-full w-full flex flex-col p-2 md:p-3">
+      <h3 class="truncate text-5 font-semibold md:text-6" :title="repo.repository">
+        {{ repo.repository }}
+      </h3>
+      <p class="line-clamp-4 my-auto">
+        {{ repo.description }}
+      </p>
       <div class="flex items-center gap-3">
         <div class="h-5 w-5" :style=" { color: config?.color }" :class="config?.icon" />
         <span class="text-0.5">{{ config?.name }}</span>
-        <div class="ml-auto flex items-center gap-2" :title="clone">
-          <span>clone</span>
+        <a :href="link" :title="link" target="_blank" class="ml-auto">
           <div class="i-tabler-brand-github h-5 w-5" />
-        </div>
+        </a>
       </div>
-    </a>
+    </div>
+    <div :title="clone" class="a-glass absolute right-0 top-0 hidden cursor-pointer items-center gap-2 rounded px-3 py-1 group-hover/card:flex md:rounded-md" @click="onCloneHandler">
+      <div v-if="!copied" class="i-tabler-command h-4 w-4" />
+      <div v-else class="i-tabler-check h-4 w-4" />
+      <span>clone</span>
+    </div>
   </div>
 </template>
 
