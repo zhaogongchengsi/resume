@@ -31,7 +31,7 @@ function onMenuHandler() {
     </Header>
   </header>
   <main class="mx-auto flex flex-1 justify-center resume-container 2xl:gap-8 lg:gap-4 md:gap-2 xl:gap-6">
-    <article class="flex-1">
+    <article class="w-200">
       <slot />
     </article>
     <aside class="fixed left-0 top-0 hidden h-screen w-full bg-gray-900/70 md:static md:w-70 md:bg-transparent" :class="{ 'block!': asideShow }" @click.self="isShow = !isShow">

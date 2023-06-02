@@ -32,6 +32,7 @@ export default defineConfig({
           'border-radius': '.375rem',
           'backgroud-color': 'red',
           'border': '1px solid var(--pre-border-color)',
+          'box-sizing': 'border-box',
         },
       },
     }),
