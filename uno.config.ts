@@ -31,11 +31,8 @@ export default defineConfig({
       cssExtend: {
         pre: {
           'padding': '1.25rem 1.5rem',
-          'overflow-x': 'auto',
+          'overflow-x': 'visible',
           'border-radius': '.375rem',
-          'backgroud-color': 'red',
-          'border': '1px solid var(--pre-border-color)',
-          'box-sizing': 'border-box',
         },
       },
     }),
@@ -51,5 +48,5 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
-  include: ['./constants/*', 'pages/*', './components/*', './composables/*', './views/*', './layouts/*', './content/*'],
+  include: ['./constants/**/*', './pages/**/*', './components/**/*', './composables/**/*', './views/**/*', './layouts/**/*', './content/**/*', './assets/**/*.[css|scss]'],
 })

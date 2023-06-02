@@ -28,15 +28,18 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="a-code-container w-full overflow-x-auto">
-    <slot />
+  <div class="a-code-container relative my-10 w-full">
+    <div class="resume-scroll overflow-x-auto">
+      <slot />
+    </div>
+    <div class="absolute right-0 top-0">
+      {{ language }}
+    </div>
   </div>
 </template>
 
 <style lang="scss">
 .a-code-container {
- pre {
-
- }
+  border: 1px solid var(--pre-border-color);
 }
 </style>
