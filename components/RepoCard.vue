@@ -39,7 +39,7 @@ function onCloneHandler() {
         {{ repo.repository }}
       </h3>
       <p class="line-clamp-4 my-auto">
-        {{ repo.description }}
+        {{ repo.description || '暂未有介绍' }}
       </p>
       <div class="flex items-center gap-3">
         <div class="h-5 w-5" :style=" { color: config?.color }" :class="config?.icon" />

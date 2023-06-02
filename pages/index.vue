@@ -5,6 +5,6 @@
   <div class="home-page-container mx-auto">
     <FirstScreen />
     <Repositories />
-    <!-- <Languages /> -->
+    <Languages />
   </div>
 </template>

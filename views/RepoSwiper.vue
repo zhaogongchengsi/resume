@@ -20,6 +20,7 @@ const props = withDefaults(defineProps<{ data?: RepoResponse[] }>(), { data: () 
           spaceBetween: 30,
         },
       }"
+      autoplay
     >
       <SwiperSlide v-for="item of props.data" :key="item.repository">
         <div class="p-2 md:p-3">
