@@ -24,9 +24,6 @@ const LanguageStatistics = computed(() => {
 
 <template>
   <div class="my-4 lg:my-8 md:my-6">
-    <h3 class="mb-4 text-5 lg:text-7 md:text-6">
-      语言使用情况
-    </h3>
     <ul class="flex flex-col gap-4 lg-gap-8 md:gap-6">
       <li v-for="(item) of LanguageStatistics" :key="item.value">
         <div class="mb-3 flex items-center gap-3 md:mb-4">

@@ -6,14 +6,19 @@ const props = withDefaults(defineProps<{ isMenu?: boolean }>(), { isMenu: false 
 const emit = defineEmits(['clickMenu'])
 const { y } = useWindowScroll()
 const { github } = useAppConfig() as any
+const isTop = ref(false)
 
-const isTop = computed(() => {
-  // todo: 当滚动条不在最顶上时，给header 一个遮罩
+onMounted(() => {
   if (y.value > 0)
-    return 'header-suspension'
+    isTop.value = true
+})
+
+watch(y, (newValue) => {
+  if (newValue > 0)
+    isTop.value = true
 
   else
-    return ''
+    isTop.value = false
 })
 
 function clickMenu() {
@@ -22,7 +27,7 @@ function clickMenu() {
 </script>
 
 <template>
-  <div class="mx-auto flex items-center justify-between rounded-md px-2 py-2 md:py-4.5 sm:py-4" :class="isTop">
+  <div class="mx-auto flex items-center justify-between rounded-md px-2 py-2 md:py-4.5 sm:py-4" :class="isTop ? 'header-suspension' : ''">
     <h1 class="text-lg md:text-2xl">
       <slot name="logo">
         <span>Z</span>
@@ -31,7 +36,7 @@ function clickMenu() {
     <div class="flex items-center gap-3">
       <a v-if="github" target="_blank" :href="github" class="block icon-default"> <div class="i-carbon-logo-github icon-btn icon-default" /> </a>
       <DarkToggle class="icon-btn icon-default" />
-      <button v-if="props.isMenu" class="icon-large i-tabler-menu-2 block icon-btn md:hidden" @click="clickMenu" />
+      <button v-if="props.isMenu" class="i-tabler-menu-2 block icon-btn md:hidden icon-large" @click="clickMenu" />
     </div>
   </div>
 </template>

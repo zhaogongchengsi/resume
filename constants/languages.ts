@@ -10,7 +10,7 @@ export default [
     color: '#eab308',
   },
   {
-    name: 'SCSS',
+    name: 'Scss',
     icon: 'i-tabler-brand-sass',
     color: '#be185d',
   },

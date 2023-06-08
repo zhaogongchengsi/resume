@@ -7,7 +7,7 @@ import Header from '~/components/Header.vue'
     <img class="h-full w-full dark:hidden" src="/bg.png" alt="">
     <img class="h-full w-full light:hidden" src="/bg-dark.png" alt="">
   </div>
-  <header class="sticky top-0 mx-auto resume-container">
+  <header class="sticky top-0 z-999 mx-auto resume-container">
     <Header>
       <template #logo>
         <a href="/"> <img class="h-8 w-8 lg:h-10 lg:w-10" src="/logo.png" alt=""> </a>
@@ -17,4 +17,25 @@ import Header from '~/components/Header.vue'
   <main class="mx-auto resume-container">
     <slot />
   </main>
+  <Footer />
 </template>
+
+<style lang="scss">
+.flicker {
+  animation: flicker 20s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+</style>

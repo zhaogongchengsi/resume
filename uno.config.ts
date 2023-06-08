@@ -17,7 +17,7 @@ export default defineConfig({
     ['article-container', 'w-full px-3 md:px-2 lg:px-2 lg:w-200 lg:w-300 xl:w-350 2xl:w-400'],
     ['icon-default', 'w-6 h-6 md:w-8 md:h-8'],
     ['icon-large', 'w-8 h-8 md:w-10 md:h-10'],
-    ['a-border', 'border rounded md:rounded-md border-purple-500 hover:border-purple-700'],
+    ['a-border', 'border rounded md:rounded-md border-purple-700 hover:border-purple-500'],
     ['a-shadow', 'shadow hover:shadow-md hover:shadow-gray-300 hover:dark:shadow-gray-100/20'],
     ['a-glass', 'backdrop-blur bg-slate-400/30'],
   ],

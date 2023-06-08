@@ -33,12 +33,12 @@ function onCloneHandler() {
 </script>
 
 <template>
-  <div class="group/card relative h-40 w-full a-border a-shadow">
+  <div class="group/card relative w-full bg-stone-300/10 a-border dark:bg-zinc-800/40 a-shadow">
     <div class="h-full w-full flex flex-col p-2 md:p-3">
       <h3 class="truncate text-5 font-semibold md:text-6" :title="repo.repository">
         {{ repo.repository }}
       </h3>
-      <p class="line-clamp-4 my-auto">
+      <p class="line-clamp-2 my-2 h-13">
         {{ repo.description || '暂未有介绍' }}
       </p>
       <div class="flex items-center gap-3">
