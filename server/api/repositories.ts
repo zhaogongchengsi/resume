@@ -12,9 +12,9 @@ export default defineEventHandler(async () => {
   for (const repo of repositories || []) {
     if (repo.trim().length < 1)
       continue
-    // const info = await getGitHubRepoInfo(repo)
-    response.push({ repository: repo, language: 'TypeScript', homepage: '#', description: `${repo} description`, link: '#' })
-    // response.push({ repository: repo, ...info })
+    const info = await getGitHubRepoInfo(repo)
+    // response.push({ repository: repo, language: 'TypeScript', homepage: '#', description: `${repo} description`, link: '#' })
+    response.push({ repository: repo, ...info })
   }
 
   return response
