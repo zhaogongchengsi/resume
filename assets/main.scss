@@ -15,6 +15,7 @@ html.dark {
 html {
     --header-bg-filter: saturate(200%) blur(20px);
 }
+
 // 白色
 html:not(.dark) {
     --pre-border-color: rgb(99, 99, 99);
@@ -22,12 +23,44 @@ html:not(.dark) {
     --header-border-color: #ECEBE8;
 
     --pillar-base-color: #dfdfdf;
+
+    // 滚动条滑块的颜色
+    --scrollbar-thumb-color: #d4d4d8;
+    // 滚动条轨道的颜色
+    --scrollbar-track-color: #dbdbdb00;
 }
 
 // 黑色
 html:not(.light) {
     --pre-border-color: #7a7a7a;
     --header-bg-color: #0c0d0ccc;
-    --header-border-color:#121110;
+    --header-border-color: #121110;
     --pillar-base-color: rgb(58 58 58 / 65%);
+
+    // 滚动条滑块的颜色
+    --scrollbar-thumb-color: #3f3f46;
+    // 滚动条轨道的颜色
+    --scrollbar-track-color: #27272a;
+}
+
+.resume-scroll {
+    --scroll-width: 5px;
+    --scroll-height: 5px;
+    --scroll-radius: 1rem;
+
+    &::-webkit-scrollbar {
+        width: var(--scroll-width);
+        height: var(--scroll-height);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb-color);
+        border-radius: var(--scroll-radius);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--scrollbar-track-color);
+        border-radius: var(--scroll-radius);
+    }
+
 }

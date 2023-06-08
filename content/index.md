@@ -44,11 +44,5 @@ html.dark {
     color: white;
 }
 
-html:not(.dark) {
-    --pre-border-color: rgb(99, 99, 99);
-}
-
-html:not(.light) {
-    --pre-border-color: #7a7a7a;
-}
+html:not(.dark) { --pre-border-color: rgb(99, 99, 99); } html:not(.light) { --pre-border-color: #7a7a7a; }
 ```
