@@ -1,4 +1,6 @@
 <script setup lang='ts'>
+import ThreeScene from '~/components/three-3d/scene.vue'
+
 const { title, tags } = useResume()
 </script>
 
@@ -35,8 +37,10 @@ const { title, tags } = useResume()
         </LinkButton>
       </div>
     </div>
-    <div class="flex items-center justify-center sm:w-1/2">
-      <img class="w-50 lg:w-120 md:w-100 sm:w-80" src="/home.png" alt="Web Html ">
+    <div class="h-80 w-full flex items-center justify-center lg:h-100 sm:w-1/2">
+      <ClientOnly fallback="3D 场景加载中">
+        <ThreeScene />
+      </ClientOnly>
     </div>
   </div>
 </template>
