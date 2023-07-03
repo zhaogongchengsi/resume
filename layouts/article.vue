@@ -25,7 +25,7 @@ function onMenuHandler() {
     </Header>
   </header>
   <main class="mx-auto flex flex-1 justify-center resume-container 2xl:gap-10 lg:gap-4 md:gap-2 xl:gap-6">
-    <article class="w-full md:w-200">
+    <article class="w-full md:w-150">
       <slot />
     </article>
     <aside class="fixed left-0 top-0 hidden h-screen w-full bg-gray-900/70 md:static md:w-70 md:bg-transparent md:block!" :class="{ 'block!': isShow }" @click.self=" clickSelf ">
