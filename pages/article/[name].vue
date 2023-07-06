@@ -8,6 +8,6 @@ definePageMeta({
 
 <template>
   <div class="max-w-full text-base prose prose-truegray w-full! xl:text-xl dark:prose-invert">
-    <ContentDoc path="/" />
+    <ContentDoc path="crypto" />
   </div>
 </template>

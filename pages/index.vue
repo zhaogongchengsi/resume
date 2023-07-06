@@ -9,7 +9,7 @@ const showId = ref(1)
     <div class="my-3">
       <div class="mb-3 flex gap-2 border-b border-zinc-300 dark:border-slate-100/30">
         <div class="home-header-tab" :class="showId === 1 ? `home-header-tab-active` : ''" @click="showId = 1">
-          <div class="i-tabler-brand-bunpo home-header-tab-icon" />
+          <div class="home-header-tab-icon i-tabler-brand-bunpo" />
           <span class="home-header-tab-title">最近项目</span>
         </div>
         <div class="home-header-tab" :class="showId === 2 ? `home-header-tab-active` : ''" @click="showId = 2">
