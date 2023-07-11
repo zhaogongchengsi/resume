@@ -4,11 +4,8 @@ body,
     margin: 0;
     padding: 0;
     min-height: 100vh;
-}
-
-html.dark {
-    background: #222;
-    color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -17,11 +14,17 @@ html {
     --header-border-color:  rgba(189,189,189, 0.3);
 }
 
+body {
+    background-color: var(--backgroud);
+    color: var(--color);
+}
+
 // 白色
 html:not(.dark) {
+    --backgroud: #fcfcfc;
+    --color: #333;
     --pre-border-color: rgb(99, 99, 99);
     --header-bg-color: rgba(255, 255, 255, 0.623);
-    // --header-border-color: #3f3f3f;
 
     --pillar-base-color: #dfdfdf;
 
@@ -33,9 +36,11 @@ html:not(.dark) {
 
 // 黑色
 html:not(.light) {
+    --backgroud: #222;
+    --color: #fff;
+
     --pre-border-color: #7a7a7a;
     --header-bg-color: #0c0d0ccc;
-    // --header-border-color:  rgba( #dedede, 0.4);
     --pillar-base-color: rgb(58 58 58 / 65%);
 
     // 滚动条滑块的颜色

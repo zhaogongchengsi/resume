@@ -10,7 +10,7 @@ import Header from '~/components/Header.vue'
       </template>
     </Header>
   </header>
-  <main>
+  <main class="mx-auto container">
     <slot />
   </main>
   <Footer />

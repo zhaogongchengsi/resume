@@ -27,14 +27,19 @@ function clickMenu() {
 </script>
 
 <template>
-  <div class="mx-auto flex items-center justify-between px-3 py-4 md:py-4.5 sm:py-4" :class="isTop ? 'header-suspension' : ''">
+  <div
+    class="mx-auto flex items-center justify-between px-3 py-4 md:py-4.5 sm:py-4"
+    :class="isTop ? 'header-suspension' : ''"
+  >
     <h1 class="text-lg md:text-2xl">
       <slot name="logo">
         <span>Z</span>
       </slot>
     </h1>
     <div class="flex items-center gap-3">
-      <a v-if="github" target="_blank" :href="github" class="block icon-default"> <div class="i-carbon-logo-github icon-btn icon-default" /> </a>
+      <a v-if="github" target="_blank" :href="github" class="block icon-default">
+        <div class="i-carbon-logo-github icon-btn icon-default" />
+      </a>
       <DarkToggle class="icon-btn icon-default" />
       <button v-if="props.isMenu" class="i-tabler-menu-2 block icon-btn md:hidden icon-large" @click="clickMenu" />
     </div>
@@ -43,8 +48,7 @@ function clickMenu() {
 
 <style lang='scss'>
 .header-suspension {
-  // background: var(--header-bg-color);
-  // backdrop-filter: var(--header-bg-filter);
   border-bottom: 1px solid var(--header-border-color);
+  background-color: var(--backgroud);
 }
 </style>
