@@ -14,13 +14,14 @@ html.dark {
 
 html {
     --header-bg-filter: saturate(200%) blur(20px);
+    --header-border-color:  rgba(189,189,189, 0.3);
 }
 
 // 白色
 html:not(.dark) {
     --pre-border-color: rgb(99, 99, 99);
     --header-bg-color: rgba(255, 255, 255, 0.623);
-    --header-border-color: #ECEBE8;
+    // --header-border-color: #3f3f3f;
 
     --pillar-base-color: #dfdfdf;
 
@@ -34,7 +35,7 @@ html:not(.dark) {
 html:not(.light) {
     --pre-border-color: #7a7a7a;
     --header-bg-color: #0c0d0ccc;
-    --header-border-color: #121110;
+    // --header-border-color:  rgba( #dedede, 0.4);
     --pillar-base-color: rgb(58 58 58 / 65%);
 
     // 滚动条滑块的颜色

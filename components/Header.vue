@@ -27,7 +27,7 @@ function clickMenu() {
 </script>
 
 <template>
-  <div class="mx-auto flex items-center justify-between rounded-md px-2 py-2 md:py-4.5 sm:py-4" :class="isTop ? 'header-suspension' : ''">
+  <div class="mx-auto flex items-center justify-between px-3 py-4 md:py-4.5 sm:py-4" :class="isTop ? 'header-suspension' : ''">
     <h1 class="text-lg md:text-2xl">
       <slot name="logo">
         <span>Z</span>
@@ -43,8 +43,8 @@ function clickMenu() {
 
 <style lang='scss'>
 .header-suspension {
-  background: var(--header-bg-color);
-  backdrop-filter: var(--header-bg-filter);
-  border: 1px solid var(--header-border-color);
+  // background: var(--header-bg-color);
+  // backdrop-filter: var(--header-bg-filter);
+  border-bottom: 1px solid var(--header-border-color);
 }
 </style>

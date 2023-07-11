@@ -45,10 +45,6 @@ export default defineNuxtConfig({
     }, '~/components'],
   },
 
-  // imports: {
-  //   dirs: [''],
-  // },
-
   content: {
     highlight: {
       theme: {
