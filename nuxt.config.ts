@@ -57,6 +57,7 @@ export default defineNuxtConfig({
         'css',
         'html',
         'shell',
+        'go',
       ],
     },
     documentDriven: true,
