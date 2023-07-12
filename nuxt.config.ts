@@ -19,7 +19,6 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
     '~/assets/main.scss',
-    // 'swiper/css',
   ],
 
   colorMode: {
