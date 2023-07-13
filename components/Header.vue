@@ -24,6 +24,10 @@ watch(y, (newValue) => {
 function clickMenu() {
   emit('clickMenu')
 }
+
+function setLang() {
+  locale.value = locale.value === 'en' ? 'cn' : 'en'
+}
 </script>
 
 <template>
@@ -37,15 +41,7 @@ function clickMenu() {
       </slot>
     </h1>
     <div class="flex items-center gap-3">
-      <!-- <span>{{ $t('language') }}</span> -->
-      <select v-model="locale">
-        <option value="en">
-          en
-        </option>
-        <option value="cn">
-          cn
-        </option>
-      </select>
+      <span class="cursor-pointer" @click="setLang"> {{ locale === 'en' ? '中文' : 'English' }} </span>
       <a target="_blank" href="https://github.com/zhaogongchengsi" class="block icon-default">
         <div class="i-carbon-logo-github icon-btn icon-default" />
       </a>
