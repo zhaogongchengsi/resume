@@ -1,11 +1,10 @@
 <script setup lang='ts'>
 import { useWindowScroll } from '@vueuse/core'
-import DarkToggle from './DarkToggle.vue'
 
 const props = withDefaults(defineProps<{ isMenu?: boolean }>(), { isMenu: false })
 const emit = defineEmits(['clickMenu'])
 const { y } = useWindowScroll()
-const { github } = useAppConfig() as any
+const { social } = useAppConfig() as any
 const isTop = ref(false)
 
 onMounted(() => {
@@ -37,7 +36,7 @@ function clickMenu() {
       </slot>
     </h1>
     <div class="flex items-center gap-3">
-      <a v-if="github" target="_blank" :href="github" class="block icon-default">
+      <a target="_blank" href="https://github.com/zhaogongchengsi" class="block icon-default">
         <div class="i-carbon-logo-github icon-btn icon-default" />
       </a>
       <DarkToggle class="icon-btn icon-default" />

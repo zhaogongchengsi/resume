@@ -8,12 +8,18 @@ useContentHead(page)
 </script>
 
 <template>
-  <div class="home-page-container mx-auto">
-    <div class="mx-auto prose prose-truegray dark:prose-invert">
+  <div class="mx-auto px-3 py-4 container">
+    <div class="mx-auto max-w-200 w-full">
       <ContentDoc v-slot="{ doc }" path="me">
-        <h1>{{ doc.title }}</h1>
-        <p>{{ doc.description }}</p>
-        <ContentRenderer :value="doc" />
+        <h1 class="text-8">
+          {{ doc.title }}
+        </h1>
+        <p class="text-6">
+          {{ doc.description }}
+        </p>
+        <article class="prose prose-truegray max-w-200! dark:prose-invert">
+          <ContentRenderer :value="doc" />
+        </article>
       </ContentDoc>
     </div>
   </div>
