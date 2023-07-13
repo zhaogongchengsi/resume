@@ -8,6 +8,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/content',
+    '@nuxtjs/i18n',
+    '@nuxthq/ui',
   ],
 
   experimental: {
@@ -60,6 +62,11 @@ export default defineNuxtConfig({
       ],
     },
     documentDriven: true,
+  },
+
+  i18n: {
+    locales: ['en', 'cn'],
+    defaultLocale: 'en',
   },
 
   devServer: {

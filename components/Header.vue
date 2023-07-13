@@ -4,8 +4,9 @@ import { useWindowScroll } from '@vueuse/core'
 const props = withDefaults(defineProps<{ isMenu?: boolean }>(), { isMenu: false })
 const emit = defineEmits(['clickMenu'])
 const { y } = useWindowScroll()
-const { social } = useAppConfig() as any
 const isTop = ref(false)
+
+const { locale } = useI18n()
 
 onMounted(() => {
   if (y.value > 0)
@@ -36,6 +37,15 @@ function clickMenu() {
       </slot>
     </h1>
     <div class="flex items-center gap-3">
+      <!-- <span>{{ $t('language') }}</span> -->
+      <select v-model="locale">
+        <option value="en">
+          en
+        </option>
+        <option value="cn">
+          cn
+        </option>
+      </select>
       <a target="_blank" href="https://github.com/zhaogongchengsi" class="block icon-default">
         <div class="i-carbon-logo-github icon-btn icon-default" />
       </a>
