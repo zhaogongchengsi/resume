@@ -1,11 +1,9 @@
 <script setup lang='ts'>
 import { useWindowScroll } from '@vueuse/core'
+import NavBar from './NavBar.vue'
 
-const props = withDefaults(defineProps<{ isMenu?: boolean }>(), { isMenu: false })
-const emit = defineEmits(['clickMenu'])
 const { y } = useWindowScroll()
 const isTop = ref(false)
-
 const { locale } = useI18n()
 
 onMounted(() => {
@@ -20,10 +18,6 @@ watch(y, (newValue) => {
   else
     isTop.value = false
 })
-
-function clickMenu() {
-  emit('clickMenu')
-}
 
 function setLang() {
   locale.value = locale.value === 'en' ? 'cn' : 'en'
@@ -40,13 +34,14 @@ function setLang() {
         <span>Z</span>
       </slot>
     </h1>
+    <NavBar />
     <div class="flex items-center gap-3">
       <span class="cursor-pointer" @click="setLang"> {{ locale === 'en' ? '中文' : 'English' }} </span>
       <a target="_blank" href="https://github.com/zhaogongchengsi" class="block icon-default">
-        <div class="i-carbon-logo-github icon-btn icon-default" />
+        <div class="i-tabler:brand-github icon-btn icon-default" />
       </a>
       <DarkToggle class="icon-btn icon-default" />
-      <button v-if="props.isMenu" class="i-tabler-menu-2 block icon-btn md:hidden icon-large" @click="clickMenu" />
+      <button class="i-tabler-menu-2 block icon-btn md:hidden icon-large" />
     </div>
   </div>
 </template>
