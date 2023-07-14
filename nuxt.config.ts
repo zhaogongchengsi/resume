@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vite-pwa/nuxt',
     '@nuxt/content',
+    '@nuxtjs/i18n',
   ],
 
   experimental: {
@@ -70,6 +71,11 @@ export default defineNuxtConfig({
     //     // Imagine you have a blog inside your content folder. You can set this option to `content/blog` with the prefix option to `/blog` to avoid conflicts with local files.
     //   },
     // },
+  },
+
+  i18n: {
+    locales: ['en', 'cn'],
+    defaultLocale: 'en',
   },
 
   devServer: {
