@@ -16,7 +16,7 @@ const navs = [
 </script>
 
 <template>
-  <nav class="hidden md:block">
+  <nav>
     <ul class="flex border border-zinc-300 rounded-xl dark:border-zinc-600">
       <li v-for="item of navs" :key="item.link">
         <router-link :to="item.link" class="block px-4 py-2 text-zinc-500 dark:text-zinc-200 dark:text-zinc-300 hover:text-zinc-900 hover:dark:text-zinc-200">

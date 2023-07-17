@@ -18,7 +18,7 @@ function clickSelf() {
 <template>
   <teleport to="body">
     <div v-if="props.open" class="drawer-container fixed left-0 top-0 z-9999 h-screen w-full bg-black/50 backdrop-blur" @click.self="clickSelf">
-      <div class="drawer-center h-full w-0 bg-white dark:bg-slate-900" :class="[props.widthClass, { 'drawer-active': props.open }]">
+      <div class="drawer-center h-full w-0 bg-white transition-width duration-1000 dark:bg-slate-900" :class="[{ 'w-6/10': props.open }]">
         <slot />
       </div>
     </div>
@@ -34,8 +34,5 @@ function clickSelf() {
 .drawer-enter ,
 .drawer-leave-to {
 width: 0 !important;
-}
-.drawer-center {
-transition: width 0.3s;
 }
 </style>
