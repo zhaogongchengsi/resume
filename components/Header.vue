@@ -1,10 +1,12 @@
 <script setup lang='ts'>
 import { useWindowScroll } from '@vueuse/core'
 import NavBar from './NavBar.vue'
+import Drawer from './ui/drawer.vue'
 
 const { y } = useWindowScroll()
 const isTop = ref(false)
 const { locale } = useI18n()
+const open = ref(true)
 
 onMounted(() => {
   if (y.value > 0)
@@ -41,8 +43,13 @@ function setLang() {
         <div class="i-tabler:brand-github icon-btn icon-default" />
       </a>
       <DarkToggle class="icon-btn icon-default" />
-      <button class="i-tabler-menu-2 block icon-btn md:hidden icon-large" />
+      <button class="i-tabler-menu-2 block icon-btn md:hidden icon-large" @click="open = !open" />
     </div>
+    <Drawer v-model:open="open">
+      <div>
+        123
+      </div>
+    </Drawer>
   </div>
 </template>
 

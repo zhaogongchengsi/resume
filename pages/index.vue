@@ -2,6 +2,7 @@
 definePageMeta({
   title: '首页',
 })
+
 const { locale } = useI18n()
 const { page } = useContent()
 useContentHead(page)
