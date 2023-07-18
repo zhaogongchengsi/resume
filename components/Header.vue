@@ -1,5 +1,8 @@
 <script setup lang='ts'>
 import NavBar from './NavBar.vue'
+import type { Resume } from '~/types'
+
+const appConfig = useAppConfig() as Resume
 
 const { locale } = useI18n()
 const open = ref(false)
@@ -31,8 +34,15 @@ function setLang() {
       <Transition name="mobile-nav">
         <div v-if="open" class="fixed left-0 top-0 z-9999 block h-screen w-full bg-[var(--backgroud)] px-3 py-3 md:hidden">
           <div class="flex justify-end">
-            <button class="i-tabler-x h-6 w-6" @click="open = false" />
+            <button class="i-tabler-x h-6 w-6 select-none" @click="open = false" />
           </div>
+          <ul class="divide-y divide-slate-700/60 dark:divide-slate-300/50">
+            <li v-for="item of appConfig.navbar" :key="item.link">
+              <router-link :to="item.link" class="block px-4 py-2 text-zinc-500 dark:text-zinc-200 dark:text-zinc-300 hover:text-zinc-900 hover:dark:text-zinc-200">
+                <span>{{ $t(item.title) }}</span>
+              </router-link>
+            </li>
+          </ul>
         </div>
       </Transition>
     </teleport>
