@@ -16,6 +16,20 @@ const resume: Resume = {
       link: 'https://github.com/zhaogongchengsi',
     },
   ],
+  navbar: [
+    {
+      title: 'home',
+      link: '/',
+    },
+    {
+      title: 'blog',
+      link: 'article',
+    },
+    {
+      title: 'doubt',
+      link: '#',
+    },
+  ],
 }
 
 export default defineAppConfig<{}>(resume)

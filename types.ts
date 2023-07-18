@@ -18,6 +18,12 @@ export interface Resume {
   social?: Social[]
   occupation?: string[]
   tags?: string[]
+  navbar: NavBarItem[]
+}
+
+export interface NavBarItem {
+  title: string
+  link: string
 }
 
 export interface GithubConent {
