@@ -1,6 +1,7 @@
 ---
 title: '你好'
 description: '欢迎来到我的主页'
+ignore: true
 head:
   meta:
     - name: 'keywords'

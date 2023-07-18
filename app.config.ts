@@ -18,12 +18,8 @@ const resume: Resume = {
   ],
   navbar: [
     {
-      title: 'home',
-      link: '/',
-    },
-    {
       title: 'blog',
-      link: 'article',
+      link: '/article',
     },
     {
       title: 'doubt',

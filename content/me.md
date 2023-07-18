@@ -1,6 +1,7 @@
 ---
 title: 'Hello'
 description: 'Welcome to my website.'
+ignore: true
 head:
   meta:
     - name: 'keywords'
