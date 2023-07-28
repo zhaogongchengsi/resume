@@ -17,11 +17,21 @@ html {
 body {
     background-color: var(--backgroud);
     color: var(--color);
+
+    background-image: url(/bg.png);
+    background-repeat: no-repeat ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.dark body {
+  background-image: url(/bg-dark.png);
 }
 
 // 白色
 html:not(.dark) {
-    --backgroud: #fcfcfc;
+    --backgroud: #fdfdfd;
     --color: #333;
     --pre-border-color: rgb(99, 99, 99);
     --header-bg-color: rgba(255, 255, 255, 0.623);
@@ -36,7 +46,7 @@ html:not(.dark) {
 
 // 黑色
 html:not(.light) {
-    --backgroud: #222;
+    --backgroud: #0c0c0c;
     --color: #fff;
 
     --pre-border-color: #7a7a7a;
@@ -49,7 +59,7 @@ html:not(.light) {
     --scrollbar-track-color: #27272a;
 }
 
-.resume-scroll {
+.resume-scroll, body {
     --scroll-width: 5px;
     --scroll-height: 5px;
     --scroll-radius: 1rem;

@@ -5,6 +5,9 @@ export default {
     // { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
     // { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
   ],
+  script: [
+    { src: '/trigger.js' },
+  ],
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'description', content: ['Resume', 'ZZH Resume', 'blog', 'zzh blog'].join(' ') },
