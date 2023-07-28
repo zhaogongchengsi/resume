@@ -7,7 +7,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="max-w-full text-base prose prose-truegray w-full! xl:text-xl dark:prose-invert">
+  <div class="resume-prose mx-auto max-w-180 w-full">
     <ContentDoc path="crypto" />
   </div>
 </template>

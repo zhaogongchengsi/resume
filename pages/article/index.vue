@@ -12,7 +12,7 @@ const result = await queryContent().where(where).sort({ time: -1 }).find()
 <template>
   <div class="mx-auto my-10 max-w-200 md:my-15">
     <ul class="flex flex-col gap-5 px-3">
-      <li v-for="article in result" :key="article._path" tg-name="ar-opacity" tg-from="0" tg-to="1">
+      <li v-for="article in result" :key="article._path" tg-name="opacity">
         <router-link :to="`article${article._path}`" class="group relative flex flex-col gap-2 sm:py-3">
           <span class="absolute right-0 top-0 z-1 opacity-50 group-hover:opacity-75">{{ article.time }}</span>
           <div class="z-2 flex flex-col gap-2 opacity-80 group-hover:opacity-95">

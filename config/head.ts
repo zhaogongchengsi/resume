@@ -6,7 +6,8 @@ export default {
     // { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
   ],
   script: [
-    { src: '/trigger.js' },
+    // see https://github.com/triggerjs/trigger
+    { src: '/trigger.js', defer: true },
   ],
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },

@@ -7,8 +7,8 @@
       <a href="/"> <img class="h-8 w-8 lg:h-10 lg:w-10" src="/logo.png" alt=""> </a>
     </template>
   </Header>
-  <main class="relative mx-auto flex flex-1 justify-center resume-container 2xl:gap-10 lg:gap-4 md:gap-2 xl:gap-6">
-    <article class="mx-auto container">
+  <main class="relative mx-auto w-full">
+    <article class="mx-auto w-full px-3 py-3 container md:py-6">
       <slot />
     </article>
   </main>
