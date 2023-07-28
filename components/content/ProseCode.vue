@@ -1,4 +1,5 @@
 <script lang="ts">
+import { useClipboard } from '@vueuse/core'
 import { defineComponent } from '#imports'
 
 export default defineComponent({
@@ -24,22 +25,27 @@ export default defineComponent({
       default: null,
     },
   },
+  setup() {
+    const { copy, copied } = useClipboard()
+
+    return {
+      copy,
+      copied,
+    }
+  },
 })
 </script>
 
 <template>
-  <div class="a-code-container relative my-10 w-full">
-    <div class="resume-scroll overflow-x-auto">
-      <slot />
+  <div class="relative my-5 w-full">
+    <div class="mb-2 flex items-center justify-between">
+      <div class="text-4 uppercase">
+        {{ language }}
+      </div>
+      <button class="h-5 w-5" :class="[!copied ? 'i-carbon:copy' : 'i-carbon:checkmark']" @click="copy(code)" />
     </div>
-    <div class="absolute right-0 top-0">
-      {{ language }}
+    <div class="resume-scroll overflow-x-auto rounded-lg bg-gray-100 p-3 dark:bg-zinc-900">
+      <slot />
     </div>
   </div>
 </template>
-
-<style lang="scss">
-.a-code-container {
-  border: 1px solid var(--pre-border-color);
-}
-</style>
