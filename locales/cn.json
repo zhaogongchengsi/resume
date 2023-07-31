@@ -1,5 +1,6 @@
 {
 	"home": "首页",
 	"blog": "博客",
-	"doubt": "疑问"
+	"doubt": "疑问",
+	"not-exist": "文章不存在"
 }
