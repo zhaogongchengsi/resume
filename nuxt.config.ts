@@ -61,6 +61,8 @@ export default defineNuxtConfig({
         'go',
       ],
     },
+    locales: ['en', 'cn'],
+    defaultLocale: 'en',
     documentDriven: true,
   },
 
