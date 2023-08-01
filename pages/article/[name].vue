@@ -3,6 +3,7 @@ definePageMeta({
   layout: 'article',
 })
 
+const { next, prev } = useContent()
 const router = useRoute()
 const { locale } = useI18n()
 const { page } = useContent()
@@ -35,5 +36,16 @@ const name = computed(() => {
         </div>
       </template>
     </ContentDoc>
+
+    <div class="mt-5 flex items-center justify-between">
+      <NuxtLink v-if="prev" :to="prev._path" class="max-w-1/2 flex items-center opacity-75 hover:opacity-100">
+        <div h-5 w-5 class="i-carbon:chevron-left" />
+        <span>{{ $t("prev") }}</span>
+      </NuxtLink>
+      <NuxtLink v-if="next" :to="next._path" class="max-w-1/2 flex items-center opacity-75 hover:opacity-100">
+        <span>{{ $t("next") }}</span>
+        <div h-5 w-5 class="i-carbon:chevron-right" />
+      </NuxtLink>
+    </div>
   </div>
 </template>

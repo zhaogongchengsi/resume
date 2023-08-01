@@ -2,5 +2,7 @@
 	"home": "Home",
 	"blog": "Blog",
 	"doubt": "Doubt",
-	"not-exist": "Article does not exist"
+	"not-exist": "Article does not exist",
+	"prev": "Previous",
+	"next": "Next"
 }
