@@ -8,14 +8,14 @@ const { page } = useContent()
 useContentHead(page)
 
 const me = computed(() => {
-  return locale.value === 'en' ? 'me' : 'cn/me'
+  return locale.value === 'en' ? 'me' : 'me_cn'
 })
 </script>
 
 <template>
   <div class="mx-auto px-3 py-4 container">
     <div class="mx-auto max-w-200 w-full">
-      <ContentDoc v-slot="{ doc }" path="me">
+      <ContentDoc v-slot="{ doc }" :path="me">
         <h1 class="text-8">
           {{ doc.title }}
         </h1>

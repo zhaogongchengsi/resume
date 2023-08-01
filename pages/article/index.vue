@@ -1,9 +1,12 @@
 <script setup lang='ts'>
+const { locale } = useI18n()
+
 const where = {
   $or: [
     { ignore: false },
     { ignore: { $exists: false } },
   ],
+  _path: locale.value === 'en' ? { $not: /_cn$/ } : { $regex: /_cn$/ },
 }
 
 const result = await queryContent().where(where).sort({ time: -1 }).find()

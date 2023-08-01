@@ -4,11 +4,18 @@ definePageMeta({
 })
 
 const router = useRoute()
+const { locale } = useI18n()
+const { page } = useContent()
+useContentHead(page)
+
+const name = computed(() => {
+  return locale.value === 'en' ? router.params.name : `${router.params.name}_cn`
+})
 </script>
 
 <template>
   <div class="mx-auto max-w-180 w-full rounded-lg bg-white/40 p-4 backdrop-blur-sm dark:bg-black/40">
-    <ContentDoc :path="router.params.name">
+    <ContentDoc :path="name">
       <template #default="{ doc }">
         <h3 class="resume-prose-ignore mt-3 text-center text-6 md:text-7">
           {{ doc.title }}
