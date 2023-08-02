@@ -2,6 +2,9 @@
 title: '你好'
 description: '欢迎来到我的主页'
 ignore: true
+image:
+  src: '/home.png'
+  alt: 'An image showcasing My Page.'
 head:
   meta:
     - name: 'keywords'
