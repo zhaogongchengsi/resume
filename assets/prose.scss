@@ -63,3 +63,12 @@
     }
 
 }
+
+
+.home-prose {
+    p {
+        @apply text-black/90 dark:text-white/80 my-4 md:my-6 text-4 md:text-5;
+    }
+}
+
+

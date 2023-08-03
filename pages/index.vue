@@ -36,7 +36,7 @@ const me = computed(() => {
           </div>
         </div>
 
-        <article class="prose prose-truegray max-w-250! dark:prose-invert">
+        <article class="home-prose">
           <ContentRenderer :value="doc" />
         </article>
       </ContentDoc>
