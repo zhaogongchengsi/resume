@@ -71,7 +71,15 @@
     }
 
     a {
-        @apply text-violet-400/80 hover:text-violet-800;
+        @apply hover:text-violet-400/80 text-violet-800;
+    }
+
+    em {
+        @apply text-3;
+    }
+
+    strong {
+        @apply font-bold;
     }
 }
 
