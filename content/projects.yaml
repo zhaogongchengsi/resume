@@ -1,0 +1,21 @@
+templates:
+  - icon: "🎉"
+    name: "starter-gin"
+    language:
+      - Golang
+    details: "gin go web framework starter template"
+    github: "https://github.com/zhaogongchengsi/starter-gin"
+  - icon: "✨"
+    name: "starter-vue"
+    language:
+      - Vue
+    details: "vue 3 starter template"
+    github: "https://github.com/zhaogongchengsi/starter-vue"
+other:
+  - icon: "👑"
+    github: "https://github.com/zhaogongchengsi/resume"
+    name: "resume"
+    language:
+      - Vue
+      - Nuxt
+    details: A web app to showcase my resume and projects.

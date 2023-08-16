@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "@iconify-json/tabler": "^1.1.77",
-    "@nuxthq/ui": "^2.5.0",
     "@triggerjs/trigger": "^1.0.8",
     "sass": "^1.62.1",
     "swiper": "^9.3.2",
@@ -25,6 +24,7 @@
     "@iconify-json/twemoji": "^1.1.11",
     "@nuxt/content": "^2.6.0",
     "@nuxt/devtools": "^0.4.0",
+    "@nuxthq/ui": "^2.5.0",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/i18n": "8.0.0-beta.13",
     "@pinia/nuxt": "^0.4.8",
