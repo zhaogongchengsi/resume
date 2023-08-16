@@ -1,6 +1,8 @@
 {
 	"home": "Home",
 	"blog": "Blog",
+	"projects": "projects",
+	"favorites": "favorites",
 	"doubt": "Doubt",
 	"not-exist": "Article does not exist",
 	"prev": "Previous",

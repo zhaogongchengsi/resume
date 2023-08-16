@@ -12,7 +12,7 @@ const where = {
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-const result = await queryContent().where(where).sort({ time: -1 }).find()
+const result = await queryContent('blog').where(where).sort({ time: -1 }).find()
 </script>
 
 <template>

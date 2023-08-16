@@ -8,4 +8,5 @@ export default defineI18nConfig(() => ({
     cn,
     en,
   },
+  vueI18nLoader: true,
 }))

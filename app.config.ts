@@ -22,8 +22,12 @@ const resume: Resume = {
       link: '/article',
     },
     {
-      title: 'doubt',
-      link: '#',
+      title: 'projects',
+      link: '/projects',
+    },
+    {
+      title: 'favorites',
+      link: '/favorites',
     },
   ],
 }

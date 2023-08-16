@@ -1,6 +1,8 @@
 {
 	"home": "首页",
 	"blog": "博客",
+	"projects": "项目",
+	"favorites": "收藏夹",
 	"doubt": "疑问",
 	"not-exist": "文章不存在",
 	"next": "下一篇",
