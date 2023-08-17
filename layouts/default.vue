@@ -12,5 +12,6 @@
   <main class="mx-auto container">
     <slot />
   </main>
+  <particles />
   <Footer />
 </template>

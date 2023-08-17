@@ -8,6 +8,8 @@ export default {
   script: [
     // see https://github.com/triggerjs/trigger
     { src: '/trigger.js', defer: true },
+    // see https://vincentgarreau.com/particles.js/
+    { src: '/particles.min.js' },
   ],
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
