@@ -29,7 +29,7 @@ const me = computed(() => {
 
             <router-link
               to="/article"
-              class="flex items-center gap-5 border border-2 border-indigo-500/75 rounded-lg px-4 py-2 shadow-indigo-500/70 hover:border-indigo-500 md:rounded-xl md:px-5 md:py-3 hover:shadow-lg"
+              class="flex items-center gap-5 border border-1 border-indigo-500/75 rounded-lg px-4 py-2 shadow-indigo-500/20 hover:border-indigo-500 md:rounded-xl hover:bg-indigo-500/20 md:px-5 md:py-3 hover:shadow-md"
             >
               <span class="text-3 md:text-4">{{ $t("view") }}</span>
               <div h-5 w-5 text-indigo class="i-carbon:plan" />

@@ -15,7 +15,7 @@ const props = defineProps({
 <template>
   <ul class="z-2 max-w-200 w-full">
     <li v-for="(item, index) of props.data" :key="index" class="my-3 md:my-5 md:my-7">
-      <a :href="item.github" class="group flex gap-2 rounded-md bg-gray-400/10 px-3 py-4 hover:bg-gray-400/20">
+      <a :href="item.github" target="_blank" class="group flex gap-2 rounded-md bg-gray-400/10 px-3 py-4 hover:bg-gray-400/20">
         <div v-if="item.icon" class="h-8 w-8 flex items-center justify-center opacity-25 group-hover:opacity-40">
           <div class="i-carbon:logo-github h-5 w-5" />
         </div>
