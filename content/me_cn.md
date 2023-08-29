@@ -21,5 +21,3 @@ head:
 
 
 如果你感兴趣，可以进我的[Github](https://github.com/zhaogongchengsi) 主页查看我日常开发的一些小玩意
-
-#### 开发中...

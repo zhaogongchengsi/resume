@@ -67,11 +67,12 @@
 
 .home-prose {
     p {
-        @apply text-black/90 dark:text-white/80 my-4 md:my-6 text-4 md:text-5;
+        @apply text-slate-600 dark:text-white/70 my-4 md:my-6 text-4 md:text-5;
     }
 
     a {
-        @apply hover:text-violet-400/80 text-violet-800;
+        @apply hover:text-black/80 dark:hover:text-white/80 dark:text-white;
+        background-image: linear-gradient(to top, #41a0478a 30%, transparent 70%);
     }
 
     em {

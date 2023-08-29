@@ -16,7 +16,7 @@ const name = computed(() => {
 
 <template>
   <div class="mx-auto max-w-180 w-full rounded-lg bg-white/40 p-4 backdrop-blur-sm dark:bg-black/40">
-    <ContentDoc :path="name">
+    <ContentDoc :path="`blog/${name}`">
       <template #default="{ doc }">
         <h3 class="resume-prose-ignore mt-3 text-center text-6 md:text-7">
           {{ doc.title }}
