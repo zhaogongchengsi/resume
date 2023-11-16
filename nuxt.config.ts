@@ -40,31 +40,31 @@ export default defineNuxtConfig({
     head,
   },
 
-  components: {
-    dirs: [{
-      path: '~/views',
+  components: [
+    {
+      prefix: '',
+      path: '~/components/app',
       global: true,
-    }, '~/components'],
-  },
+    },
+    {
+      prefix: '',
+      path: '~/components/docs',
+      global: true,
+    },
+  ],
 
   content: {
+    documentDriven: true,
     highlight: {
       theme: {
-        default: 'github-light',
         dark: 'github-dark',
+        default: 'github-light',
       },
-      preload: [
-        'js',
-        'ts',
-        'css',
-        'html',
-        'shell',
-        'go',
-      ],
+      preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini'],
     },
-    // locales: ['en', 'zn'],
-    // defaultLocale: 'en',
-    documentDriven: true,
+    navigation: {
+      fields: ['icon', 'titleTemplate', 'header', 'main', 'aside', 'footer'],
+    },
   },
 
   i18n: {
