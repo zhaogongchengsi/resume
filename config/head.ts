@@ -1,15 +1,11 @@
 export default {
   viewport: 'width=device-width,initial-scale=1',
   link: [
-    { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
-    // { rel: 'icon', type: 'image/svg+xml', href: '/nuxt.svg' },
-    // { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+    { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' },
   ],
   script: [
     // see https://github.com/triggerjs/trigger
     { src: '/trigger.js', defer: true },
-    // see https://vincentgarreau.com/particles.js/
-    { src: '/particles.min.js' },
   ],
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
