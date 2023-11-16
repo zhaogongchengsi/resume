@@ -6,10 +6,14 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
-    '@vite-pwa/nuxt',
     '@nuxt/content',
-    '@nuxtjs/i18n',
     '@nuxthq/studio',
+    'pinceau/nuxt',
+  ],
+
+  extends: [
+    // '@nuxt-themes/elements',
+    // '@nuxt-themes/typography',
   ],
 
   experimental: {
@@ -42,14 +46,12 @@ export default defineNuxtConfig({
 
   components: [
     {
-      prefix: '',
-      path: '~/components/app',
-      global: true,
+      prefix: 'ui',
+      path: '~/components/ui',
     },
     {
-      prefix: '',
-      path: '~/components/docs',
-      global: true,
+      prefix: 'app',
+      path: '~/components/app',
     },
   ],
 
@@ -65,11 +67,6 @@ export default defineNuxtConfig({
     navigation: {
       fields: ['icon', 'titleTemplate', 'header', 'main', 'aside', 'footer'],
     },
-  },
-
-  i18n: {
-    locales: ['en', 'cn'],
-    defaultLocale: 'en',
   },
 
   devServer: {

@@ -49,7 +49,6 @@ export default defineConfig({
     transformerVariantGroup(),
   ],
   include: [
-    './constants/**/*',
     './pages/**/*',
     './components/**/*',
     './composables/**/*',

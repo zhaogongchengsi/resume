@@ -1,7 +1,6 @@
 ---
 title: 'Hello'
 description: 'Welcome to my website.'
-ignore: true
 image:
   src: '/home.png'
   alt: 'An image showcasing My Page.'
