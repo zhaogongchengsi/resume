@@ -29,6 +29,24 @@ export default defineTheme({
       dark: '#bcbcbc',
     },
   },
+  card: {
+    borderRadius: '12px',
+    shine: {
+      size: '300px',
+      opacity: '0.3',
+    },
+    background: {
+      content: {
+        initial: '#f5f5f5',
+        dark: '#1c1c1f',
+      },
+      container: {
+        initial: '#ececec',
+        dark: 'rgba(255, 255, 255, 0.12)',
+      },
+    },
+    boxShadow: 'rgba(0, 0, 0, 0.12) 0px 5px 14px',
+  },
   prose: {
     p: {
       fontSize: {

@@ -59,6 +59,11 @@ export default defineNuxtConfig({
       path: '~/components/global',
       global: true,
     },
+    {
+      prefix: '',
+      path: '~/components/icons',
+      global: true,
+    },
   ],
 
   content: {

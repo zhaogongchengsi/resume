@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1 class="mb-4 text-2xl font-bold text-white">
+    <h1 class="text-block mb-4 text-2xl font-bold dark:text-white">
       <ContentSlot :use="$slots.title" unwrap="p" />
     </h1>
     <slot name="description" />
