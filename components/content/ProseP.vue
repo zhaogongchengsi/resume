@@ -1,5 +1,5 @@
 <template>
-  <p class="prose-p my-2 text-xs font-light md:my-4 md:text-sm">
+  <p class="prose-p my-2 text-sm font-light md:my-4 md:text-base">
     <slot />
   </p>
 </template>

@@ -26,12 +26,12 @@ watch([elementX, elementY], ([x, y]) => {
       <component :is="icon" v-if="icon" />
       <slot />
       <div class="my-2">
-        <h3 class="text-lg font-bold dark:text-white">
+        <h3 class="text-block text-lg font-bold dark:text-zinc-200">
           <ContentSlot :use="$slots.title" unwrap="p">
             Card title
           </ContentSlot>
         </h3>
-        <p class="text-base">
+        <p class="text-sm text-zinc-700 dark:text-zinc-400">
           <ContentSlot :use="$slots.description" unwrap="p">
             Card description
           </ContentSlot>
