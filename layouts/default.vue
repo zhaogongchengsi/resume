@@ -1,7 +1,7 @@
 <template>
   <div class="app-default-page">
     <app-header />
-    <article class="app-default-container area-x resume-prose mx-auto max-w-250">
+    <article class="app-default-container area-x mx-auto my-5 max-w-200">
       <slot />
     </article>
     <app-footer />

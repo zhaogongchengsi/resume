@@ -1,7 +1,5 @@
 .resume-prose {
 
-    @apply text-black/90 dark:text-white/80;
-
     h1 {
         @apply text-5 sm:text-6 md:text-7 font-bold mb-3 sm:mb-4 md:mb-5;
     }
@@ -62,26 +60,6 @@
         @apply text-3 md:text-4;
     }
 
-}
-
-
-.home-prose {
-    p {
-        @apply text-slate-600 dark:text-white/70 my-4 md:my-6 text-4 md:text-5;
-    }
-
-    a {
-        @apply hover:text-black/80 dark:hover:text-white/80 dark:text-white;
-        background-image: linear-gradient(to top, #41a0478a 30%, transparent 70%);
-    }
-
-    em {
-        @apply text-3;
-    }
-
-    strong {
-        @apply font-bold;
-    }
 }
 
 
