@@ -84,3 +84,9 @@ console.log(result)
 ---
 
 To create a code block, use triple backticks (\`) followed by the language name. Examples:
+
+| 姓名   | 年龄 | 职业      |
+| ------ | ---- | --------- |
+| 小明   | 25   | 工程师    |
+| 小红   | 30   | 教师      |
+| 小刚   | 28   | 设计师    |

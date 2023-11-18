@@ -152,5 +152,16 @@ export default defineTheme({
       padding: '0.25rem 0.5rem',
       borderRadius: '3px',
     },
+    table: {
+      align: 'center',
+      border: {
+        width: '1px',
+        style: 'solid',
+        color: {
+          initial: '#e3e3e3',
+          dark: '#3e3e3e',
+        },
+      },
+    },
   },
 })
