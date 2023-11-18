@@ -10,6 +10,9 @@ export default defineTheme({
   color: {
     white: '#ffffff',
     black: '#0E0D0D',
+    primary: {
+
+    },
   },
   page: {
     header: {
@@ -17,16 +20,6 @@ export default defineTheme({
     },
     footer: {
       height: '60px',
-    },
-  },
-  icon: {
-    size: {
-      '@sm': '1.2rem',
-      '@md': '1.25rem',
-    },
-    color: {
-      initial: '#333333',
-      dark: '#bcbcbc',
     },
   },
   card: {

@@ -1,6 +1,7 @@
 ---
 title: 'Hello'
 description: 'Welcome to my website.'
+layout: 'page'
 image:
   src: '/home.png'
   alt: 'An image showcasing My Page.'
@@ -59,3 +60,4 @@ What's included
   ::
 ::
 
+::blogs

@@ -1,7 +1,7 @@
 <template>
-  <div class="app-default-page">
+  <div class="app-page_page">
     <app-header />
-    <article class="app-default-container mx-auto my-5 max-w-200 area-x">
+    <article class="app-page_container mx-auto my-5 max-w-200 area-x">
       <slot />
     </article>
     <app-footer />
@@ -9,7 +9,7 @@
 </template>
 
 <style lang="scss">
-.app-default-container {
+.app-page_container {
   min-height: calc(100vh - $dt('page.header.height') - $dt('page.footer.height'));
 }
 </style>
