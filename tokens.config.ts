@@ -114,5 +114,23 @@ export default defineTheme({
         // 向右偏移
       },
     },
+    pre: {
+      borderRadius: '3px',
+      margin: '2rem 0',
+      padding: '16px',
+      backgroundColor: {
+        initial: '#f6f8fa',
+        dark: '#1c1c1f',
+      },
+      lineHeight: '1.65',
+      border: {
+        width: '1px',
+        style: 'solid',
+        color: {
+          initial: '#f6f8fa',
+          dark: '#1c1c1f',
+        },
+      },
+    },
   },
 })

@@ -28,11 +28,34 @@ defineProps({
 </script>
 
 <template>
-  <pre :class="$props.class"><slot /></pre>
+  <div class="typography-pre_x">
+    <pre :class="$props.class"><slot /></pre>
+  </div>
 </template>
 
-<style>
-pre code .line {
-  display: block;
-}
+<style lang="ts">
+css({
+  '.typography-pre_x': {
+    width: '100%',
+    position: 'relative',
+    borderColor: '{prose.pre.border.color}',
+    borderWidth: '{prose.pre.border.width}',
+    borderStyle: '{prose.pre.border.style}',
+    borderRadius: '3px',
+    overflow: 'hidden',
+    'pre': {
+      overflowX: 'auto',
+      padding: '{prose.pre.padding}',
+      lineHeight: '{prose.pro.lineHeight}',
+      display: 'flex',
+      flex: '1',
+    },
+    'code': {
+      flexShrink: '0',
+    },
+    'code, .line': {
+      display: 'block',
+    },
+  },
+})
 </style>

@@ -55,6 +55,8 @@ Use numbers followed by periods to create ordered lists. Examples:
 	2. Item 2.2
 3. Item 3
 
+[link](#)
+
 ## Links
 
 To create a link, use the following format: `[link text](URL)`. Examples:
