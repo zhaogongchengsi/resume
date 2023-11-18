@@ -81,3 +81,6 @@ function calculateSum(a, b) {
 const result = calculateSum(3, 5)
 console.log(result)
 ```
+---
+
+To create a code block, use triple backticks (\`) followed by the language name. Examples:

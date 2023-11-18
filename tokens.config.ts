@@ -132,5 +132,13 @@ export default defineTheme({
         },
       },
     },
+    hr: {
+      size: '1px',
+      color: {
+        initial: '#e3e3e3',
+        dark: '#3e3e3e',
+      },
+      margin: '2rem 0',
+    },
   },
 })
