@@ -4,7 +4,7 @@
 
 <style lang="ts">
 css({
-	'.typography-code': {
+	'.typography-code_inline': {
 		fontWeight: '{prose.code.fontWeight}',
 		fontSize: '{prose.code.fontSize}',
 		lineHeight: '{prose.code.lineHeight}',
