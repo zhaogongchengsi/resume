@@ -140,5 +140,17 @@ export default defineTheme({
       },
       margin: '2rem 0',
     },
+    code: {
+      fontSize: '1rem',
+      lineHeight: '1.5rem',
+      fontWeight: '400',
+      letterSpacing: '0.01em',
+      backgroundColor: {
+        initial: '#f6f8fa',
+        dark: '#1c1c1f',
+      },
+      padding: '0.25rem 0.5rem',
+      borderRadius: '3px',
+    },
   },
 })
