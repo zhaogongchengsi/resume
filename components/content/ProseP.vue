@@ -12,6 +12,14 @@ css({
     'font-weight': '{prose.p.fontWeight}',
     'letter-spacing': '{prose.p.letterSpacing}',
     'margin': '{prose.p.margin}',
+    a: {
+      'color': '{prose.a.color}',
+      'text-decoration': '{prose.a.textDecoration}',
+      'font-weight': '{prose.a.fontWeight}',
+      'font-size': '{prose.a.fontSize}',
+      'line-height': '{prose.a.lineHeight}',
+      'letter-spacing': '{prose.a.letterSpacing}',
+    }
   }
 })
 </style>

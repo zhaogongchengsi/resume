@@ -79,8 +79,40 @@ export default defineTheme({
       margin: '0 0 1.5rem',
     },
     a: {
+      fontSize: '1rem',
       color: '#0070f3',
       textDecoration: 'none',
+      lineHeight: '1.5rem',
+      fontWeight: '400',
+      letterSpacing: '0.01em',
+    },
+    li: {
+      margin: '0.5rem 0',
+      padding: '0 0 0 1.5rem',
+    },
+    ul: {
+      listStyleType: 'disc',
+      listStylePosition: 'inside',
+      offsetRight: '0',
+      // 嵌套样式
+      nested: {
+        listStyleType: 'circle',
+        listStylePosition: 'inside',
+        offsetRight: '1rem',
+        // 向右偏移
+      },
+    },
+    ol: {
+      listStyleType: 'decimal',
+      listStylePosition: 'inside',
+      offsetRight: '0',
+      // 嵌套样式
+      nested: {
+        listStyleType: 'decimal',
+        listStylePosition: 'inside',
+        offsetRight: '1rem',
+        // 向右偏移
+      },
     },
   },
 })

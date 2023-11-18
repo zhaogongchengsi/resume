@@ -19,7 +19,7 @@ In Markdown, paragraphs are separated by empty lines. Examples:
 
 This is the first paragraph.
 
-This is the second paragraph.
+This is the second paragraph. [link](#)
 
 To create a line break within the same paragraph, add two spaces at the end of the line.
 
@@ -41,6 +41,8 @@ Use `-`, `+`, or `*` to create unordered lists. Examples:
 
 - Item 1
 - Item 2
+	- Item 2.1
+	- Item 2.2
 - Item 3
 
 ### Ordered Lists
@@ -49,6 +51,8 @@ Use numbers followed by periods to create ordered lists. Examples:
 
 1. Item 1
 2. Item 2
+	1. Item 2.1
+	2. Item 2.2
 3. Item 3
 
 ## Links
@@ -68,5 +72,10 @@ To insert an image, use the following format: `![alt text](image URL)`. Examples
 To create a code block, use triple backticks (\`) followed by the language name. Examples:
 
 ```js
-console.log('Hello, World!')
+function calculateSum(a, b) {
+  return a + b
+}
+
+const result = calculateSum(3, 5)
+console.log(result)
 ```
