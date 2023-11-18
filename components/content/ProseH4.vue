@@ -8,7 +8,7 @@ const generate = computed(() => props.id && headings?.anchorLinks?.h4)
 </script>
 
 <template>
-  <h4 :id="id">
+  <h4 :id="id" class="typography-headline4">
     <a
       v-if="id && generate"
       :href="`#${id}`"
@@ -18,3 +18,12 @@ const generate = computed(() => props.id && headings?.anchorLinks?.h4)
     <slot v-else />
   </h4>
 </template>
+
+<style lang="ts">
+css({
+  '.typography-headline4': {
+    fontSize: '{prose.h4.fontSize}',
+    fontWeight: '{prose.h4.fontWeight}',
+  },
+})
+</style>

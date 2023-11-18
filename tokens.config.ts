@@ -10,9 +10,6 @@ export default defineTheme({
   color: {
     white: '#ffffff',
     black: '#0E0D0D',
-    primary: {
-
-    },
   },
   page: {
     header: {
@@ -40,12 +37,50 @@ export default defineTheme({
     },
     boxShadow: 'rgba(0, 0, 0, 0.12) 0px 5px 14px',
   },
+  fontSize: {
+    'xs': '12px',
+    'sm': '14px',
+    'md': '16px',
+    'lg': '18px',
+    'xl': '20px',
+    '2xl': '22px',
+    '3xl': '24px',
+  },
   prose: {
+    h1: {
+      fontSize: '2.25rem',
+      fontWeight: 'bold',
+    },
+    h2: {
+      fontSize: '1.75rem',
+      fontWeight: 'bold',
+    },
+    h3: {
+      fontSize: '1.5rem',
+      fontWeight: 'bold',
+    },
+    h4: {
+      fontSize: '1.25rem',
+      fontWeight: '400',
+    },
+    h5: {
+      fontSize: '1rem',
+      fontWeight: '400',
+    },
+    h6: {
+      fontSize: '0.875rem',
+      fontWeight: '400',
+    },
     p: {
-      fontSize: {
-        sm: '14px',
-        md: '16px',
-      },
+      fontSize: '1rem',
+      lineHeight: '1.5rem',
+      fontWeight: '400',
+      letterSpacing: '0.01em',
+      margin: '0 0 1.5rem',
+    },
+    a: {
+      color: '#0070f3',
+      textDecoration: 'none',
     },
   },
 })

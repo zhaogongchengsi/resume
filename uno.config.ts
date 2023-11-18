@@ -2,7 +2,6 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
-  presetTypography,
   presetUno,
   presetWebFonts,
   transformerDirectives,
@@ -19,15 +18,6 @@ export default defineConfig({
     presetAttributify(),
     presetIcons({
       scale: 1.2,
-    }),
-    presetTypography({
-      cssExtend: {
-        pre: {
-          'padding': '1.25rem 1.5rem',
-          'overflow-x': 'visible',
-          'border-radius': '.375rem',
-        },
-      },
     }),
     presetWebFonts({
       fonts: {

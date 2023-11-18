@@ -40,7 +40,7 @@ What's included
 
 #root
 #default
-  ::card{icon="tabler-award"}
+  ::card
   #title
   Nuxt Architecture.
   #description
