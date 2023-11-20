@@ -1,23 +1,52 @@
 ---
-title: '你好'
-description: '欢迎来到我的主页'
-ignore: true
-image:
-  src: '/home.png'
-  alt: 'An image showcasing My Page.'
-head:
-  meta:
-    - name: 'keywords'
-      content: 'nuxt, vue, content, web, js, ts, React'
-    - name: 'robots'
-      content: 'index, follow'
-    - name: 'author'
-      content: 'Zhaozunhong'
-    - name: 'copyright'
-      content: '© 2023 zhaogongchengsi'
+layout: 'page'
 ---
 
-你好，我的一个主业是前端开发工程师，主要职业是前端开发内容。所以常使用的语言是 **JS(TS)**, 在此之上我会使用**Vue**和**React**等框架，但是由于他们对于SEO不够友好，我还会使用Nuxt和Next。我称这为前端的后端。虽然主业是前端开发，但我业余时间，我还会研究一些其他的语言，比如，**Golang**，**Rust**，以及一些其他的开发技术，比如**Three.js**，让我能实现3D场景的开发。所以我觉得我更像是一位Web开发程序员，所有与Web开发的技术，我都有兴趣研究。并且乐此不疲。但我除了前端开发之外，我还会去健身房健身。并且身体才是革命的本钱。
+# Zhaozunhong
+
+你好，你能找到这，说明咱们有缘。
+
+### 关于我
+
+俺是一个主要技术栈为前端方面的开发者，但这并不妨碍我对其他技术的兴趣，由于对一些方面的需求，
+我对 `go` `java` `rust` `docker` `mysql` `electron` 等技术栈也有了解，其中 `go`, `rust` 
+是我在web以外主要感兴趣的点。
+
+最主要的是，`rust` 在web工具链方面很大的潜力。比如 `webpack` 的  `rust`  替代版本 [Rspack](https://www.rspack.dev/zh/)，并且在 2023年 `vite` 大会上，提出 `vite` 也将由 `rust` 重写，还有一方面
+是因为 wasm 方面的需求，`rust` 也有很大的潜力。所以我觉得要想前端技术更好，掌握更多的解决方案，rust在
+未来肯定是一门必不可少的语言
+
+### 关于前端
+
+我接触前端，到现在也已经有 四 五 年了，也可能更长，记不清了， 目前主要使用的语言就是 `javascript` 的超集
+`typescript`，对框架以及库的主要使用就是 `vue` `vue-router` `pinia` 等 vue生态
+对打包工具主要使用的是 `vite` `esbuild` `rollup`，但我也会使用 `webpack`。react 我也会使用，
+但就是没有vue那么了解，非说个差距就是 vue我看过源码，而react没看过源码，只知道一些基础的react运行原理
+但如果使用react写业务的话，并不影响。并且react也是我接下来会主要研究的技术栈。
+
+除了在浏览器里面折腾，我对 `electron` 也有比较不错的了解，我还专门使用esbuild 写了一个专门开发 
+`electron` app 的脚手架 [create-electron-app](https://assist-electron.netlify.app/) 以及 [github](https://github.com/zhaogongchengsi/create-electron-app) 地址。
+该脚手架上基于`esbuild`和 `vite`开发的，可以热更新主线程，无缝支持 `vite` 相关插件但这还有一些不足
+因为当初上为了公司的业务更方便所以才开发出来的
+
+还有一件事，正如你所见的这个网站就是`nuxt`开发的，`nuxt` 和 `next` 也就是 **ssr** 方面的需求，俺也能搞
 
 
-如果你感兴趣，可以进我的[Github](https://github.com/zhaogongchengsi) 主页查看我日常开发的一些小玩意
+### 关于后端
+
+上面我说过，我还会 `golang` 和 `java` 但就是 `java` 没有 `golang` 接触的时间那么长，用过的最多的后端技术就是
+`gin` + `grom` 的组合，早起的对后端的学习处了语言知识外，我还看过  `gin-vue-admin` 的源码，在这个项目上
+我学到挺多有用的技术，我还挺喜欢go这个语言的，因为这是我接触的第一个强类型的的语言，语法简单，上手非常快。但人在江湖
+飘，怎么能不会 `java` 呢，我对 java 的学习中也在进行中，话说会不会有点晚啊？
+
+### 关于技术方面的学习
+
+我在技术方面的学习，主要是一个需求驱动学习，然后效率驱动扩展。对于工作中不会或者不大了解的技术，
+我都会在业余时间快速掌握，并且有机会会探究下源码，比如当初为了加快写 `electron` app 的效率，
+写的 `create-electron-app` 我看过 `vite`的源码，专门学习了 `esbuild` 和 `rollup` 的使用
+为了对比这两者谁更适合作为主线程的构建工具，这也让我掌握了比较多的 **构建** 方面的技能，看`vite`源码
+不仅让我对`vite`的使用得心应手。也让我学到了一些写代码上的一些小技巧
+
+如果你也是一个想要学习web或者其他方面的技术的，欢迎联系我，一起交流，话说三个臭皮匠赛过诸葛亮！
+
+::blogs

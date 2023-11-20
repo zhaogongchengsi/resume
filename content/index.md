@@ -4,8 +4,6 @@ layout: 'page'
 
 # Zhaozunhong
 
-
-
 Hello, my main job is front-end development engineer, mainly engaged in front-end development content. So the commonly used language is **JS (TS)**, and on top of this, I will use frameworks such as **Vue** and **React**. 
 
 However, due to their lack of SEO friendliness, I will also use Nuxt and Next. 
@@ -14,33 +12,5 @@ I call this the backend of the front-end. Although my main business is front-end
 
 If you are interested, you can visit my [Github](https://github.com/zhaogongchengsi) homepage to view some of my daily development gadgets
 
-
-
-
-::card-grid
-#title
-What's included
-
-#root
-#default
-  ::card
-  #title
-  Nuxt Architecture.
-  #description
-  Harness the full power of Nuxt and the Nuxt ecosystem.
-  ::
-  ::card
-  #title
-  Vue Components.
-  #description
-  Use built-in components (or your own!) inside your content.
-  ::
-  ::card
-  #title
-  Write Markdown.
-  #description
-  Enjoy the ease and simplicity of Markdown and discover MDC syntax.
-  ::
-::
 
 ::blogs
