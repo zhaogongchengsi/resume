@@ -1,15 +1,11 @@
 ---
-title: On the use of encryption algorithms
-description: In web development, the most important part of login logic is to encrypt the password. Some basic logic is used (keep some copies later).
 author: Zhaozunhong
 time: 2023-7-1
 ---
 
-# 关于加密算法的使用
+# On the use of encryption algorithms
 
-为了以后过来黏贴使用
-
-## crypto-js 使用
+In web development, the most important part of login logic is to encrypt the password. Some basic logic is used (keep some copies later).
 
 ## 常用的加密算法
 

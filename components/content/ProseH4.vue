@@ -24,6 +24,7 @@ css({
   '.typography-headline4': {
     fontSize: '{prose.h4.fontSize}',
     fontWeight: '{prose.h4.fontWeight}',
+    marginBottom: '{space.md}',
   },
 })
 </style>

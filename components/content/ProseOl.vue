@@ -10,6 +10,8 @@ css({
     listStyleType: '{prose.ol.listStyleType}',
     listStylePosition: '{prose.ol.listStylePosition}',
     paddingLeft: '{prose.ol.offsetRight}',
+    marginTop: '{space.md}',
+    marginBottom: '{space.md}',
     '.typography-ol': {
       listStyleType: '{prose.ol.nested.listStyleType}',
       paddingLeft: '{prose.ol.nested.offsetRight}'

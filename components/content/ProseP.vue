@@ -11,7 +11,7 @@ css({
     'line-height': '{prose.p.lineHeight}',
     'font-weight': '{prose.p.fontWeight}',
     'letter-spacing': '{prose.p.letterSpacing}',
-    'margin': '{prose.p.margin}',
+    marginBottom: '{space.lg}',
     a: {
       'color': '{prose.a.color}',
       'text-decoration': '{prose.a.textDecoration}',

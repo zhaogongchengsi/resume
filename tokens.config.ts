@@ -46,6 +46,16 @@ export default defineTheme({
     '2xl': '22px',
     '3xl': '24px',
   },
+  space: {
+    'xs': '0.25rem',
+    'sm': '0.5rem',
+    'md': '0.75rem',
+    'lg': '1rem',
+    'xl': '1.25rem',
+    '2xl': '1.5rem',
+    '3xl': '2rem',
+    '4xl': '2.5rem',
+  },
   prose: {
     h1: {
       fontSize: '2.25rem',
@@ -76,7 +86,7 @@ export default defineTheme({
       lineHeight: '1.5rem',
       fontWeight: '400',
       letterSpacing: '0.01em',
-      margin: '0 0 1.5rem',
+      margin: '0 0 1rem 0',
     },
     a: {
       fontSize: '1rem',
@@ -127,8 +137,8 @@ export default defineTheme({
         width: '1px',
         style: 'solid',
         color: {
-          initial: '#f6f8fa',
-          dark: '#1c1c1f',
+          initial: '#e9e9e9',
+          dark: '#212121',
         },
       },
     },

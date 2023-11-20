@@ -7,7 +7,7 @@
 <style lang="ts">
 css({
   '.typography-li': {
-    margin: '{prose.li.margin}',
+    margin: '{space.sm}',
   }
 })
 </style>
