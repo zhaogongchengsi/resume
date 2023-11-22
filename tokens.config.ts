@@ -90,10 +90,13 @@ export default defineTheme({
     },
     a: {
       fontSize: '1rem',
-      color: '#0070f3',
+      color: {
+        initial: '#000000',
+        dark: '#ffffff',
+      },
       textDecoration: 'none',
       lineHeight: '1.5rem',
-      fontWeight: '400',
+      fontWeight: '500',
       letterSpacing: '0.01em',
     },
     li: {

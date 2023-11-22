@@ -27,6 +27,15 @@ css({
     'font-size': '{prose.a.fontSize}',
     'line-height': '{prose.a.lineHeight}',
     'letter-spacing': '{prose.a.letterSpacing}',
+    backgroundImage: 'linear-gradient(to left, #c52fff80, #75b1ff99);',
+    backgroundSize: '0 0.1em',
+    backgroundPosition: 'right bottom',
+    backgroundRepeat: 'no-repeat',
+    transition: 'background-size 0.1s ease-in-out',
+    "&:hover": {
+      backgroundSize: '100% 0.1rem',
+      backgroundPosition: 'left bottom',
+    }
   }
 })
 </style>
