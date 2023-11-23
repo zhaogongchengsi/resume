@@ -5,8 +5,10 @@ const query = await queryContent({
   },
 }).find()
 
+const isCn = useIsCn()
+
 const blogs = computed(() => {
-  return query.filter(item => !item._path?.startsWith('/cn'))
+  return query.filter(item => isCn.value ? item._path?.startsWith('/cn') : !item._path?.startsWith('/cn'))
 })
 </script>
 

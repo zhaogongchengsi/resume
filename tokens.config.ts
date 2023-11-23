@@ -10,6 +10,24 @@ export default defineTheme({
   color: {
     white: '#ffffff',
     black: '#0E0D0D',
+    state: {
+      success: {
+        background: '#43a047',
+        color: '#ffffff',
+      },
+      danger: {
+        background: '#e53935',
+        color: '#ffffff',
+      },
+      warning: {
+        background: '#ffa726',
+        color: '#ffffff',
+      },
+      info: {
+        background: '#2196f3',
+        color: '#ffffff',
+      },
+    },
   },
   page: {
     header: {
