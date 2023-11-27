@@ -16,14 +16,17 @@ jobs:
         run: sudo apt-get install -y ssh
 
       - name: Set up SSH key
+        env:
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          HOST: ${{ secrets.SSH_SERVER }}
+          USER: ${{ secrets.SSH_USERNAME }}
+          PROT: ${{ secrets.PROT }}
+          MKDIRTEST: ${{ secrets.PATH }}
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa ${{ secrets.SSH_SERVER }} >> ~/.ssh/known_hosts
-
-      - name: Copy project
-        run: scp -r . ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_SERVER }}:${{ secrets.PATH }}
+          echo "$KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          scp -P ${PROT} -o StrictHostKeyChecking=no -r . ${USER}@${HOST}:${MKDIRTEST}
 
     #   - name: Run SSH command
     #     run: ssh user@server 'your-command'
