@@ -21,7 +21,7 @@ jobs:
           node-version: 20  # 替换为你希望使用的 Node.js 版本
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install -g pnpm && pnpm install
 
       - name: Generate Pages
         run: npm run generate
