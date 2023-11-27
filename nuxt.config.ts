@@ -1,5 +1,3 @@
-import head from './config/head'
-
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
@@ -25,7 +23,6 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
     '~/assets/main.scss',
-    '~/assets/prose.scss',
     '~/assets/theme.css',
   ],
 
@@ -42,7 +39,17 @@ export default defineNuxtConfig({
   },
 
   app: {
-    head,
+    head: {
+      viewport: 'width=device-width,initial-scale=1',
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' },
+      ],
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: ['zhaozunhong', 'Resume', 'ZZH Resume', 'blog', 'zzh blog'].join(' ') },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
+      ],
+    },
   },
 
   components: [
