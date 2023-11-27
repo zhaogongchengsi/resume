@@ -1,28 +1,31 @@
-name: Build and release
+name: CI
+
 on:
   push:
     branches:
       - main
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  pull_request:
+    branches:
+      - main
 
+jobs:
+  lint:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install
 
       - name: Install SSH client
         run: sudo apt-get install -y ssh
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18  # 替换为你希望使用的 Node.js 版本
-
-      - name: Install Dependencies
-        run: npm install -g pnpm && pnpm install
-
+      
       - name: Generate Pages
         run: pnpm generate
 
@@ -38,3 +41,6 @@ jobs:
           mkdir -p ~/.ssh && echo "$KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           scp -P ${PROT} -o StrictHostKeyChecking=no -r ./.output/public/* ${USER}@${HOST}:${MKDIRTEST}
+
+      
+
