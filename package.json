@@ -1,6 +1,7 @@
 {
+  "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.2.0",
+  "packageManager": "pnpm@8.11.0",
   "scripts": {
     "build": "nuxi build",
     "dev": "nuxi dev",
