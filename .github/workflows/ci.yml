@@ -38,6 +38,6 @@ jobs:
           mkdir -p ~/.ssh && echo "$KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           scp -P ${PROT} -o StrictHostKeyChecking=no -r ./* ${USER}@${HOST}:${MKDIRTEST}
-          ssh -p ${PROT} -o StrictHostKeyChecking=no ${USER}@${HOST} "pnpm install && pnpm generate && cp -r ./output/public ${STATIC_DIR} > /dev/null  2>&1 &"
+          ssh -p ${PROT} -o StrictHostKeyChecking=no ${USER}@${HOST} "cd ${MKDIRTEST} && pnpm install && pnpm generate && cp -r ./output/public ${STATIC_DIR} > /dev/null  2>&1 &"
     #   - name: Run SSH command
     #     run: ssh user@server 'your-command'
