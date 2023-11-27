@@ -26,8 +26,8 @@ jobs:
       - name: Generate Pages
         run: pnpm generate
       
-      # - name: Install SSH client
-      #   run: sudo apt-get install -y ssh
+      - name: Install SSH client
+        run: sudo apt-get install -y ssh
 
       # - name: Set up SSH key
       #   env:
