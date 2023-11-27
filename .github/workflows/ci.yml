@@ -23,10 +23,9 @@ jobs:
           PROT: ${{ secrets.PROT }}
           MKDIRTEST: ${{ secrets.PATH }}
         run: |
-          mkdir -p ~/.ssh
-          echo "$KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+          mkdir -p ~/.ssh && echo "$KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          scp -P ${PROT} -o StrictHostKeyChecking=no -r . ${USER}@${HOST}:${MKDIRTEST}
+          scp -P ${PROT} -o StrictHostKeyChecking=no -r ./* ${USER}@${HOST}:${MKDIRTEST}
 
     #   - name: Run SSH command
     #     run: ssh user@server 'your-command'
