@@ -20,7 +20,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+          ssh-keyscan -t rsa ${{ secrets.SSH_SERVER }} >> ~/.ssh/known_hosts
 
       - name: Copy project
         run: scp -r . ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_SERVER }}:${{ secrets.PATH }}
