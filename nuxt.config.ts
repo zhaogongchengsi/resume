@@ -9,11 +9,6 @@ export default defineNuxtConfig({
     'pinceau/nuxt',
   ],
 
-  extends: [
-    // '@nuxt-themes/elements',
-    // '@nuxt-themes/typography',
-  ],
-
   experimental: {
     payloadExtraction: false,
     inlineSSRStyles: false,
@@ -89,7 +84,6 @@ export default defineNuxtConfig({
 
   devServer: {
     port: 3005,
-    host: '0.0.0.0',
   },
 
   devtools: {
