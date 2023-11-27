@@ -30,17 +30,10 @@ jobs:
         run: sudo apt-get install -y ssh
 
       - name: Set up SSH key
-        env:
-          STATIC_DIR: ${{ secrets.STATIC_DIR }}
-          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          HOST: ${{ secrets.SSH_SERVER }}
-          USER: ${{ secrets.SSH_USERNAME }}
-          PROT: ${{ secrets.PROT }}
-          MKDIRTEST: ${{ secrets.PATH }}
         run: |
-          mkdir -p ~/.ssh && echo "$KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+          mkdir -p ~/.ssh && echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-          scp -P ${PROT} -o StrictHostKeyChecking=no -r ./.output/public/* ${USER}@${HOST}:${MKDIRTEST}
+          scp -P ${{ secrets.PROT }} -o StrictHostKeyChecking=no -r ./.output/public/* ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_SERVER }}:${{ secrets.STATIC_DIR }}
 
       
 
