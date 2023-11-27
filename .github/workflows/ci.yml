@@ -24,7 +24,7 @@ jobs:
         run: npm install -g pnpm && pnpm install
 
       - name: Generate Pages
-        run: npm run generate
+        run: pnpm generate
 
       - name: Set up SSH key
         env:
