@@ -36,7 +36,7 @@ async function copyCode() {
   <div class="typography-pre_x">
     <div class="typography-pre_x_header">
       <span class="typography-pre_x_header_language">{{ language }}</span>
-      <button v-if="isSupported" class="h-5 w-5" :class=" copied ? 'i-carbon:checkmark' : 'i-carbon:copy' " @click="copyCode" />
+      <button v-if="isSupported" class="typography-pre_x_header_copy_button h-4 w-4" :class=" copied ? 'i-carbon:checkmark' : 'i-carbon:copy' " @click="copyCode" />
     </div>
     <pre :class="$props.class"><slot /></pre>
   </div>
@@ -53,6 +53,8 @@ css({
     borderRadius: '5px',
     overflow: 'hidden',
     margin: '{space.md} 0',
+    backgroundColor: '{prose.pre.backgroundColor}',
+    borderBottom: '1px solid {prose.pre.border.color}',
     '.typography-pre_x_header': {
       display: 'flex',
       alignItems: 'center',
@@ -63,6 +65,14 @@ css({
       '.typography-pre_x_header_language': {
         color: '{prose.pre.language.color}',
         fontSize: '{prose.pre.language.fontSize}',
+        textTransform: 'uppercase'
+      },
+      '.typography-pre_x_header_copy_button': {
+        opacity: 0.5,
+        cursor: 'pointer',
+        '&:hover': {
+          opacity: 1
+        }
       }
     },
     'pre': {
