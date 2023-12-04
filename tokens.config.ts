@@ -178,10 +178,10 @@ export default defineTheme({
       letterSpacing: '0.01em',
       backgroundColor: {
         initial: '#f6f8fa',
-        dark: '#1c1c1f',
+        dark: '#313131',
       },
       padding: '0.25rem 0.5rem',
-      borderRadius: '3px',
+      borderRadius: '5px',
     },
     table: {
       align: 'center',
