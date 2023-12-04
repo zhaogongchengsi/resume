@@ -180,7 +180,7 @@ export default defineTheme({
         initial: '#f6f8fa',
         dark: '#313131',
       },
-      padding: '0.25rem 0.5rem',
+      padding: '0.15rem 0.2rem',
       borderRadius: '5px',
     },
     table: {
