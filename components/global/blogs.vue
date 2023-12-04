@@ -17,7 +17,10 @@ const blogs = computed(() => {
     <h2 class="text-block text-2xl font-bold md:text-3xl dark:text-white">
       Blog
     </h2>
-    <ul class="mt-4 divide-y divide-zinc-200 dark:divide-zinc-700">
+    <p v-if="blogs.length === 0" class="text-block my-4 text-center text-gray-600 dark:text-gray-400">
+      {{ isCn ? '暂无内容' : 'No content' }}
+    </p>
+    <ul v-else class="mt-4 divide-y divide-zinc-200 dark:divide-zinc-700">
       <li v-for="item in blogs" :key="item._path" class="py-3">
         <nuxt-link :to="item._path" class="block opacity-80 hover:opacity-100">
           <h4 class="text-block text-lg font-bold dark:text-white">

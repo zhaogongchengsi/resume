@@ -4,6 +4,4 @@ export default defineAppConfig({
     repo: 'resume',
     branch: 'master',
   },
-  // see: https://typography.nuxt.space/
-  prose: {},
 })
