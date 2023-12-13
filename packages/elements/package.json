@@ -1,0 +1,29 @@
+{
+  "name": "natural-elements",
+  "version": "0.0.0",
+  "description": "A beautiful typography with a set of prose components to use with Nuxt Content.",
+  "keywords": [
+    "nuxt",
+    "nuxt-content"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./nuxt.config.ts",
+    "./app.config": "./app.config.ts",
+    "./tokens.config": "./tokens.config.ts"
+  },
+  "files": [
+    "components",
+    "app.config.ts",
+    "nuxt.config.ts",
+    "nuxt.schema.ts"
+  ],
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "postcss",
+        "vue"
+      ]
+    }
+  }
+}

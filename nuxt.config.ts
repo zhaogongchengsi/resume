@@ -11,6 +11,7 @@ export default defineNuxtConfig({
 
   extends: [
     './packages/typography',
+    './packages/elements',
   ],
 
   experimental: {
@@ -59,11 +60,6 @@ export default defineNuxtConfig({
     {
       prefix: 'app',
       path: '~/components/app',
-    },
-    {
-      prefix: '',
-      path: '~/components/global',
-      global: true,
     },
     {
       prefix: '',
