@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     'pinceau/nuxt',
   ],
 
+  extends: [
+    './packages/typography',
+  ],
+
   experimental: {
     payloadExtraction: false,
     inlineSSRStyles: false,
@@ -89,4 +93,6 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
+
+  typescript: { includeWorkspace: true },
 })
