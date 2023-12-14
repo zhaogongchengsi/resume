@@ -189,20 +189,60 @@ export default defineTheme({
   },
   state: {
     success: {
-      background: '#43a047',
-      color: '#ffffff',
+      background: {
+        initial: '{color.green.100}',
+        dark: '{color.green.900}',
+      },
+      color: {
+        initial: '{color.green.300}',
+        dark: '{color.green.700}',
+      },
+      border: {
+        initial: '{color.green.200}',
+        dark: '{color.green.800}',
+      },
     },
     danger: {
-      background: '#e53935',
-      color: '#ffffff',
+      background: {
+        initial: '{color.red.100}',
+        dark: '{color.red.900}',
+      },
+      color: {
+        initial: '{color.red.300}',
+        dark: '{color.red.700}',
+      },
+      border: {
+        initial: '{color.red.200}',
+        dark: '{color.red.800}',
+      },
     },
     warning: {
-      background: '#ffa726',
-      color: '#ffffff',
+      background: {
+        initial: '{color.yellow.100}',
+        dark: '{color.yellow.900}',
+      },
+      color: {
+        initial: '{color.yellow.300}',
+        dark: '{color.yellow.700}',
+      },
+      border: {
+        initial: '{color.yellow.200}',
+        dark: '{color.yellow.800}',
+      },
     },
     info: {
-      background: '#2196f3',
-      color: '#ffffff',
+      background: {
+        initial: '{color.indigoblue.100}',
+        dark: '{color.indigoblue.900}',
+      },
+      color: {
+        initial: '{color.indigoblue.500}',
+        dark: '{color.indigoblue.700}',
+      },
+      border: {
+        initial: '{color.indigoblue.200}',
+        dark: '{color.indigoblue.800}',
+      },
     },
   },
   fontSize: {

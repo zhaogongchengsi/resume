@@ -16,7 +16,7 @@ const typeClass = computed(() => {
 </script>
 
 <template>
-  <span class="badge mx-1 inline-flex rounded-md p-1" :class="typeClass">
+  <span class="badge" :class="typeClass">
     <ContentSlot :use="$slots.default" unwrap="p" />
   </span>
 </template>
@@ -24,23 +24,30 @@ const typeClass = computed(() => {
 <style lang="ts">
 css({
 	'.badge': {
-		marginBottom: '{space.lg}',
+		margin: '0 {space.sm} {space.lg} {space.sm}',
+		display: 'inline-flex',
+		padding: '{space.xs} {space.sm}',
+		borderRadius: '9999px',
 	},
 	'.badge-danger': {
-		backgroundColor: '{color.state.danger.background}',
-		color: '{color.state.danger.color}',
+		backgroundColor: '{state.danger.background}',
+		color: '{state.danger.color}',
+		border: '1px solid {state.danger.border}'
 	},
 	'.badge-warning': {
-		backgroundColor: '{color.state.warning.background}',
-		color: '{color.state.warning.color}',
+		backgroundColor: '{state.warning.background}',
+		color: '{state.warning.color}',
+		border: '1px solid {state.warning.border}'
 	},
 	'.badge-info': {
-		backgroundColor: '{color.state.info.background}',
-		color: '{color.state.info.color}',
+		backgroundColor: '{state.info.background}',
+		color: '{state.info.color}',
+		border: '1px solid {state.info.border}'
 	},
 	'.badge-success': {
-		backgroundColor: '{color.state.success.background}',
-		color: '{color.state.success.color}',
+		backgroundColor: '{state.success.background}',
+		color: '{state.success.color}',
+		border: '1px solid {state.success.border}'
 	},
 })
 </style>

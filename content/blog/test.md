@@ -2,6 +2,16 @@
 
 This is an example Markdown file that demonstrates common Markdown syntax and usage.
 
+:badge[v1.2]
+
+
+:badge[Deprecated]{type="warning"}
+
+
+::badge{type="danger"}
+Not found!
+::
+
 ## Headings
 
 Use `#` to denote the level of headings, ranging from level 1 to level 6. Examples:
