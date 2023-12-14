@@ -39,5 +39,6 @@ export default defineConfig({
     './layouts/**/*',
     './content/**/*',
     './assets/**/*.[css|scss]',
+    './packages/**/*',
   ],
 })

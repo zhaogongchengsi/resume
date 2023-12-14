@@ -206,13 +206,33 @@ export default defineTheme({
     },
   },
   fontSize: {
-    'xs': '12px',
-    'sm': '14px',
-    'md': '16px',
-    'lg': '18px',
-    'xl': '20px',
-    '2xl': '22px',
-    '3xl': '24px',
+    'xs': '0.75rem',
+    'sm': '0.85rem',
+    'md': '1rem',
+    'lg': '1.125rem',
+    'xl': '1.25rem',
+    '2xl': '1.5rem',
+    '3xl': '1.875rem',
+  },
+  text: {
+    primary: {
+      static: {
+        initial: '{color.gray.900}',
+        dark: '{color.gray.50}',
+      },
+      // TODO: add `hover` state
+      hover: {},
+    },
+    secondary: {
+      static: {
+        initial: '{color.gray.500}',
+        dark: '{color.gray.400}',
+      },
+      hover: {
+        initial: '{color.gray.700}',
+        dark: '{color.gray.200}',
+      },
+    },
   },
   space: {
     'xs': '0.25rem',

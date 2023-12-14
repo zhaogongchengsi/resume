@@ -30,5 +30,5 @@ My approach to learning technology is driven by practical needs and efficiency. 
 
 If you are also someone who wants to learn web or other technologies, feel free to contact me. We can exchange knowledge. After all, the wisdom of three people is greater than that of a single individual!
 
-
+### Blogs
 ::blogs

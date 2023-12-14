@@ -49,4 +49,4 @@ layout: 'page'
 
 如果你也是一个想要学习web或者其他方面的技术的，欢迎联系我，一起交流，话说三个臭皮匠赛过诸葛亮！
 
-::blogs
+::blogs{query='cn/blog'}
