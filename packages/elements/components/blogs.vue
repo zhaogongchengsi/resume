@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { fromNow } from '../utils/time'
+
 const props = withDefaults(defineProps<{
   query?: string
   limit?: number
@@ -14,16 +16,6 @@ function createQueryContent(query: string, limit?: number) {
 const query = await createQueryContent(props.query, props.limit).find()
 
 const isCn = useIsCn()
-function formatTime(timestamp: string | number | Date) {
-  const date = new Date(timestamp)
-  const year = date.getFullYear()
-  const month = (`0${date.getMonth() + 1}`).slice(-2)
-  const day = (`0${date.getDate()}`).slice(-2)
-  const hours = (`0${date.getHours()}`).slice(-2)
-  const minutes = (`0${date.getMinutes()}`).slice(-2)
-  const seconds = (`0${date.getSeconds()}`).slice(-2)
-  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`
-}
 </script>
 
 <template>
@@ -35,7 +27,7 @@ function formatTime(timestamp: string | number | Date) {
       <li v-for="item in (query as any[])" :key="item._path" class="natural-blog-list_item">
         <nuxt-link :to="item._path" class="natural-blog-list_link">
           <div class="natural-blog-list_item_date">
-            <span class="natural-blog-list_item_date_v">{{ item.date ? formatTime(item.date) : 'forgot' }}</span>
+            <span class="natural-blog-list_item_date_v">{{ item.date ? fromNow(item.date) : 'forgot' }}</span>
           </div>
           <h4 class="natural-blog-list_item_title">
             {{ item.title }}
