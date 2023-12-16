@@ -25,5 +25,8 @@
         "vue"
       ]
     }
+  },
+  "dependencies": {
+    "pinceau": "0.20.1"
   }
 }

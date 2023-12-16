@@ -25,5 +25,9 @@
         "vue"
       ]
     }
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "pinceau": "0.20.1"
   }
 }
