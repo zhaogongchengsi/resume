@@ -9,6 +9,6 @@
 
 <style>
 .app-page-container {
- background: radial-gradient(ellipse 80% 50% at 50% -20%,rgba(110, 255, 107, 0.5),var(--backgroud));
+ background: radial-gradient(ellipse 80% 50% at 50% -20%,rgba(255, 91, 91, 0.4),var(--backgroud));
 }
 </style>

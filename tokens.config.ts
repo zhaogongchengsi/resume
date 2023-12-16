@@ -187,6 +187,48 @@ export default defineTheme({
       900: '#380011',
     },
   },
+  fontSize: {
+    'xs': '0.75rem',
+    'sm': '0.85rem',
+    'md': '1rem',
+    'lg': '1.125rem',
+    'xl': '1.25rem',
+    '2xl': '1.5rem',
+    '3xl': '1.875rem',
+  },
+  text: {
+    primary: {
+      static: {
+        initial: '{color.gray.900}',
+        dark: '{color.gray.50}',
+      },
+      // TODO: add `hover` state
+      hover: {
+        initial: '{color.red.400}',
+        dark: '{color.red.300}',
+      },
+    },
+    secondary: {
+      static: {
+        initial: '{color.gray.500}',
+        dark: '{color.gray.400}',
+      },
+      hover: {
+        initial: '{color.gray.700}',
+        dark: '{color.gray.200}',
+      },
+    },
+  },
+  space: {
+    'xs': '0.25rem',
+    'sm': '0.5rem',
+    'md': '0.75rem',
+    'lg': '1rem',
+    'xl': '1.25rem',
+    '2xl': '1.5rem',
+    '3xl': '2rem',
+    '4xl': '2.5rem',
+  },
   page: {
     header: {
       height: '60px',

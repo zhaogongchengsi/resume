@@ -1,6 +1,13 @@
 ---
 layout: 'page'
+title: 'Zhaozunhong'
+description: '你好，你能找到这，说明咱们有缘。'
+keywords: 'about, me'
 ---
+
+::avatar{size='lg'}
+![Nature](https://picsum.photos/250/250)
+::
 
 # Zhaozunhong
 

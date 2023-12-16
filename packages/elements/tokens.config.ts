@@ -59,48 +59,6 @@ export default defineTheme({
       },
     },
   },
-  fontSize: {
-    'xs': '0.75rem',
-    'sm': '0.85rem',
-    'md': '1rem',
-    'lg': '1.125rem',
-    'xl': '1.25rem',
-    '2xl': '1.5rem',
-    '3xl': '1.875rem',
-  },
-  text: {
-    primary: {
-      static: {
-        initial: '{color.gray.900}',
-        dark: '{color.gray.50}',
-      },
-      // TODO: add `hover` state
-      hover: {
-        initial: '{color.green.400}',
-        dark: '{color.green.300}',
-      },
-    },
-    secondary: {
-      static: {
-        initial: '{color.gray.500}',
-        dark: '{color.gray.400}',
-      },
-      hover: {
-        initial: '{color.gray.700}',
-        dark: '{color.gray.200}',
-      },
-    },
-  },
-  space: {
-    'xs': '0.25rem',
-    'sm': '0.5rem',
-    'md': '0.75rem',
-    'lg': '1rem',
-    'xl': '1.25rem',
-    '2xl': '1.5rem',
-    '3xl': '2rem',
-    '4xl': '2.5rem',
-  },
   card: {
     borderRadius: '12px',
     shine: {
@@ -118,5 +76,22 @@ export default defineTheme({
       },
     },
     boxShadow: 'rgba(0, 0, 0, 0.12) 0px 5px 14px',
+  },
+  avatar: {
+    size: {
+      xl: '120px',
+      lg: '80px',
+      md: '60px',
+      sm: '40px',
+      xs: '30px',
+    },
+    background: {
+      initial: '#f5f5f5',
+      dark: '#1c1c1f',
+    },
+    border: {
+      initial: '#ececec',
+      dark: 'rgba(255, 255, 255, 0.12)',
+    },
   },
 })

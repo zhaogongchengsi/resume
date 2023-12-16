@@ -1,6 +1,13 @@
 ---
 layout: 'page'
+title: 'Zhaozunhong'
+description: 'Hello, if you can find this, it means we are destined to meet.'
+keywords: 'Zhaozunhong'
 ---
+
+::avatar{size='lg'}
+![Nature](https://picsum.photos/250/250)
+::
 
 # Zhaozunhong
 
