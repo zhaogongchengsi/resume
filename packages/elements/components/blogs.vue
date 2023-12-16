@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { fromNow } from '../utils/time'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
 
 const props = withDefaults(defineProps<{
   query?: string
@@ -8,14 +9,18 @@ const props = withDefaults(defineProps<{
   query: 'blog',
   limit: undefined,
 })
+dayjs.extend(relativeTime)
+const isCn = useIsCn()
+
+function fromNow(date: string | Date) {
+  return dayjs(date).fromNow()
+}
 
 function createQueryContent(query: string, limit?: number) {
   return limit ? queryContent(query).limit(limit) : queryContent(query)
 }
 
 const query = await createQueryContent(props.query, props.limit).find()
-
-const isCn = useIsCn()
 </script>
 
 <template>
@@ -64,6 +69,7 @@ css({
         },
         '.natural-blog-list_item_title': {
           fontSize: '{fontSize.md}',
+          fontWeight: 'bold',
         },
         '.natural-blog-list_item_description': {
           fontSize: '{fontSize.sm}',
@@ -95,9 +101,13 @@ css({
           }
         },
         '&:hover': {
+          borderColor: '{text.primary.hover}',
           '.natural-blog-list_item_description': {
             color: '{text.secondary.hover}',
           },
+          '.natural-blog-list_item_title': {
+            color: '{text.primary.hover}',
+          }
         }
       }
     }
