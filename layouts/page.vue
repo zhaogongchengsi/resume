@@ -1,11 +1,15 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  <div class="app-page_page">
+  <UContainer>
     <app-header />
-    <article class="app-page_container mx-auto my-5 max-w-200 area-x">
+    <article>
       <slot />
     </article>
     <app-footer />
-  </div>
+  </UContainer>
 </template>
 
 <style lang="scss">

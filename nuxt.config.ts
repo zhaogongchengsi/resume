@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   experimental: {
     payloadExtraction: false,
-    inlineSSRStyles: false,
+    // inlineSSRStyles: false,
     renderJsonPayloads: true,
   },
 
@@ -85,6 +85,4 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-
-  typescript: { includeWorkspace: true },
 })

@@ -10,6 +10,6 @@
 
 <style lang="scss">
 .app-default-container {
-  min-height: calc(100vh - $dt('page.header.height') - $dt('page.footer.height'));
+
 }
 </style>
