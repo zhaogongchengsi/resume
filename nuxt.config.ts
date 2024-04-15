@@ -1,8 +1,8 @@
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
-    '@pinia/nuxt',
-    '@nuxtjs/color-mode',
+    // '@pinia/nuxt',
+    // '@nuxtjs/color-mode',
     '@nuxt/content',
     '@nuxthq/studio',
     '@nuxt/ui',
@@ -17,7 +17,6 @@ export default defineNuxtConfig({
   },
 
   css: [
-    '@unocss/reset/tailwind.css',
     '~/assets/main.scss',
     '~/assets/theme.css',
   ],
@@ -56,12 +55,7 @@ export default defineNuxtConfig({
     {
       prefix: 'app',
       path: '~/components/app',
-    },
-    {
-      prefix: '',
-      path: '~/components/icons',
-      global: true,
-    },
+    }
   ],
 
   content: {

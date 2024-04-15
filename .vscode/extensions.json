@@ -4,7 +4,6 @@
     "antfu.unocss",
     "antfu.goto-alias",
     "csstools.postcss",
-    "dbaeumer.vscode-eslint",
-    "vue.volar"
+    "dbaeumer.vscode-eslint"
   ]
 }

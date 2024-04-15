@@ -9,11 +9,6 @@ body,
 }
 
 
-html {
-    --header-bg-filter: saturate(200%) blur(20px);
-    --header-border-color:  rgba(189,189,189, 0.3);
-}
-
 body {
     background-color: var(--backgroud);
     color: var(--color);
@@ -23,10 +18,9 @@ body {
 html:not(.dark) {
     --backgroud: #fdfdfd;
     --color: #333;
+
     --pre-border-color: rgb(99, 99, 99);
     --header-bg-color: rgba(255, 255, 255, 0.623);
-
-    --pillar-base-color: #dfdfdf;
 
     // 滚动条滑块的颜色
     --scrollbar-thumb-color: #d4d4d8;
@@ -38,11 +32,6 @@ html:not(.dark) {
 html:not(.light) {
     --backgroud: #161616;
     --color: #bcbcbc;
-
-    --pre-border-color: #7a7a7a;
-    --header-bg-color: #0c0d0ccc;
-    --pillar-base-color: rgb(58 58 58 / 65%);
-
     // 滚动条滑块的颜色
     --scrollbar-thumb-color: #3f3f46;
     // 滚动条轨道的颜色
@@ -71,7 +60,6 @@ html:not(.light) {
 
 }
 
-// todo
 // https://github.com/antfu/antfu.me/blob/main/src/logics/index.ts
 ::view-transition-old(root),
 ::view-transition-new(root) {
@@ -89,4 +77,18 @@ html:not(.light) {
 }
 .dark::view-transition-new(root) {
   z-index: 1;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: var(--color-bg-2);
+  }
 }

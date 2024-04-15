@@ -64,7 +64,7 @@ function toggleDark(event: MouseEvent) {
 </script>
 
 <template>
-  <button class="!outline-none" @click="toggleDark($event)">
-    <div class="i-carbon-sun dark:i-carbon-moon primary-icon" />
+  <button class="icon-button" @click="toggleDark($event)">
+    <Icon :name="color.preference === 'dark' ? `i-carbon-moon` : `i-carbon-sun`" />
   </button>
 </template>

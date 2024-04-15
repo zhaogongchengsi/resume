@@ -3,15 +3,11 @@
 </script>
 
 <template>
-  <UContainer>
+  <UContainer class="min-h-screen flex flex-col items-center">
     <app-header />
-    <article>
+    <article class="my-auto prose-zinc prose dark:prose-invert lg:prose-xl">
       <slot />
     </article>
     <app-footer />
   </UContainer>
 </template>
-
-<style lang="scss">
-
-</style>
