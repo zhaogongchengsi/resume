@@ -14,6 +14,5 @@
 
 <style lang="scss">
 .app-footer-container {
-  height: $dt("page.footer.height");
 }
 </style>

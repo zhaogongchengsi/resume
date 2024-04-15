@@ -9,7 +9,5 @@
 </template>
 
 <style lang="scss">
-.app-page_container {
-  min-height: calc(100vh - $dt('page.header.height') - $dt('page.footer.height'));
-}
+
 </style>

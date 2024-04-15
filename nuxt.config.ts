@@ -1,17 +1,13 @@
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
-    '@unocss/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/content',
     '@nuxthq/studio',
-    'pinceau/nuxt',
-  ],
-
-  extends: [
-    './packages/typography',
-    './packages/elements',
+    '@nuxt/ui',
+    '@nuxtjs/tailwindcss',
+    'nuxt-icon',
   ],
 
   experimental: {
