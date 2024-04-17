@@ -5,4 +5,4 @@ title: 'Zhaozunhong Blog'
 
 # Blog
 
-Hello
+1. [Blog one](/blog/test)

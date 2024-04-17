@@ -1,7 +1,6 @@
 export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
-    // '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/content',
     '@nuxthq/studio',
@@ -9,7 +8,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
   ],
-
   experimental: {
     payloadExtraction: false,
     // inlineSSRStyles: false,
