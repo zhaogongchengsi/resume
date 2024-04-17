@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
     // '@pinia/nuxt',
-    // '@nuxtjs/color-mode',
+    '@nuxtjs/color-mode',
     '@nuxt/content',
     '@nuxthq/studio',
     '@nuxt/ui',

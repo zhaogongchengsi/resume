@@ -1,10 +1,9 @@
 <template>
-  <div class="app-default-page">
+  <UContainer class="min-h-screen flex flex-col items-center">
     <app-header />
-    <article>
+    <article class="prose-zinc prose dark:prose-invert lg:prose-xl">
       <slot />
     </article>
-    <app-footer />
-  </div>
+  </UContainer>
 </template>
 
