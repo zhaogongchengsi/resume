@@ -1,10 +1,6 @@
-'use client'
+import { ReloadButton } from './InteractiveButtons'
 
 export default function ServerError() {
-  const retry = () => {
-    window.location.reload()
-  }
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#202124]">
       <div className="text-center max-w-[600px] px-5 py-10">
@@ -21,12 +17,9 @@ export default function ServerError() {
         <p className="text-[#999] text-[13px] mt-5">
           这是一个服务器端错误，不是客户端的问题。
         </p>
-        <button
-          onClick={retry}
-          className="mt-8 px-6 py-2.5 bg-[#1a73e8] text-white border-none rounded font-medium text-sm cursor-pointer hover:bg-[#1765cc]"
-        >
-          重试
-        </button>
+        <div className="mt-8">
+          <ReloadButton />
+        </div>
       </div>
     </div>
   )

@@ -1,14 +1,6 @@
-'use client'
-
-import { useEffect, useState } from 'react'
+import DomainDisplay from './DomainDisplay'
 
 export default function NetworkError() {
-  const [domain, setDomain] = useState('')
-
-  useEffect(() => {
-    setDomain(window.location.hostname)
-  }, [])
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#202124]">
       <div className="text-left max-w-[600px] px-5 py-10">
@@ -19,7 +11,7 @@ export default function NetworkError() {
         </div>
         <h1 className="text-2xl font-normal mb-4 text-[#333] dark:text-[#bdc1c6]">无法访问此网站</h1>
         <p className="text-sm leading-relaxed mb-3 text-[#333] dark:text-[#bdc1c6]">
-          <strong>{domain}</strong> 的响应时间过长。
+          <strong><DomainDisplay /></strong> 的响应时间过长。
         </p>
         <div className="my-8 p-5 bg-[#f5f5f5] dark:bg-[#2d2e30] rounded">
           <p className="font-medium mb-3 text-sm text-[#333] dark:text-[#bdc1c6]">请试试以下办法：</p>

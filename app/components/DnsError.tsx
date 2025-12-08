@@ -1,18 +1,7 @@
-'use client'
-
-import { useEffect, useState } from 'react'
+import DomainDisplay from './DomainDisplay'
+import { ReloadButton } from './InteractiveButtons'
 
 export default function DnsError() {
-  const [domain, setDomain] = useState('')
-
-  useEffect(() => {
-    setDomain(window.location.hostname)
-  }, [])
-
-  const reload = () => {
-    window.location.reload()
-  }
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#202124]">
       <div className="text-left max-w-[600px] px-5 py-10">
@@ -22,7 +11,7 @@ export default function DnsError() {
           </svg>
         </div>
         <h1 className="text-[22px] font-normal mb-4 leading-snug text-[#333] dark:text-[#bdc1c6]">
-          找不到 {domain} 的服务器 DNS 地址
+          找不到 <DomainDisplay /> 的服务器 DNS 地址
         </h1>
         <p className="text-sm leading-relaxed mb-3 text-[#999] font-mono">
           DNS_PROBE_FINISHED_NXDOMAIN
@@ -31,7 +20,7 @@ export default function DnsError() {
           <p className="font-medium mb-3 text-sm text-[#333] dark:text-[#bdc1c6]">以下是一些建议:</p>
           <ul className="list-disc pl-8 m-0">
             <li className="mb-2 text-sm text-[#333] dark:text-[#bdc1c6]">
-              检查是否存在拼写错误: <strong>{domain}</strong>
+              检查是否存在拼写错误: <strong><DomainDisplay /></strong>
             </li>
             <li className="mb-2 text-sm text-[#333] dark:text-[#bdc1c6]">
               如果连接使用了代理服务器，请检查代理设置
@@ -41,12 +30,7 @@ export default function DnsError() {
             </li>
           </ul>
         </div>
-        <button
-          onClick={reload}
-          className="mt-5 px-6 py-2.5 bg-[#1a73e8] text-white border-none rounded font-medium text-sm cursor-pointer hover:bg-[#1765cc]"
-        >
-          重新加载
-        </button>
+        <ReloadButton />
       </div>
     </div>
   )

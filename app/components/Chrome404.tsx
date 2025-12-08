@@ -1,14 +1,6 @@
-'use client'
-
-import { useEffect, useState } from 'react'
+import DomainDisplay from './DomainDisplay'
 
 export default function Chrome404() {
-  const [domain, setDomain] = useState('')
-
-  useEffect(() => {
-    setDomain(window.location.hostname)
-  }, [])
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#202124]">
       <div className="text-center max-w-[600px] px-5 py-10">
@@ -19,7 +11,7 @@ export default function Chrome404() {
         </div>
         <h1 className="text-2xl font-normal mb-4 text-[#333] dark:text-[#bdc1c6]">此网页无法正常运作</h1>
         <p className="text-sm leading-relaxed mb-3 text-[#333] dark:text-[#bdc1c6]">
-          <strong>{domain}</strong> 目前无法处理此请求。
+          <strong><DomainDisplay /></strong> 目前无法处理此请求。
         </p>
         <p className="text-xs text-[#999] dark:text-[#666] mt-8">HTTP ERROR 404</p>
       </div>

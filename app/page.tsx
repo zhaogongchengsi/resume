@@ -1,6 +1,3 @@
-'use client'
-
-import { useEffect, useState } from 'react'
 import Chrome404 from './components/Chrome404'
 import NetworkError from './components/NetworkError'
 import DnsError from './components/DnsError'
@@ -16,17 +13,9 @@ const errorComponents = [
 ]
 
 export default function Home() {
-  const [ErrorComponent, setErrorComponent] = useState<React.ComponentType | null>(null)
-
-  useEffect(() => {
-    // 随机选择一个错误页面
-    const randomIndex = Math.floor(Math.random() * errorComponents.length)
-    setErrorComponent(() => errorComponents[randomIndex])
-  }, [])
-
-  if (!ErrorComponent) {
-    return null
-  }
+  // 在服务端随机选择一个错误页面
+  const randomIndex = Math.floor(Math.random() * errorComponents.length)
+  const ErrorComponent = errorComponents[randomIndex]
 
   return <ErrorComponent />
 }
