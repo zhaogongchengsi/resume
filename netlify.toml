@@ -1,11 +1,9 @@
 [build.environment]
-  NODE_VERSION = "16"
+  NODE_VERSION = "18"
 
 [build]
-  publish = "dist"
+  publish = ".next"
   command = "pnpm run build"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
