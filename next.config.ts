@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
   experimental: {
     mdxRs: true,
   },
+  // SEO 优化
+  poweredByHeader: false,
+  compress: true,
+  // 生成静态页面
+  output: 'standalone',
 }
 
 export default nextConfig
