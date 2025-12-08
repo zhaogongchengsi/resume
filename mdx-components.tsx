@@ -45,13 +45,19 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     li: ({ children }) => (
       <li className="mb-2">{children}</li>
     ),
-    code: ({ children }) => (
-      <code className="bg-[#f5f5f5] dark:bg-[#1e1e1e] px-1.5 py-0.5 rounded text-sm font-mono text-[#d73a49] dark:text-[#ff7b72]">
-        {children}
-      </code>
-    ),
+    code: ({ children, className }) => {
+      const isInline = !className
+      if (isInline) {
+        return (
+          <code className="bg-[#f5f5f5] dark:bg-[#1e1e1e] px-1.5 py-0.5 rounded text-sm font-mono text-[#d73a49] dark:text-[#ff7b72]">
+            {children}
+          </code>
+        )
+      }
+      return <code className={className}>{children}</code>
+    },
     pre: ({ children }) => (
-      <pre className="bg-[#f5f5f5] dark:bg-[#1e1e1e] p-4 rounded-lg overflow-x-auto mb-4 border border-[#e5e5e5] dark:border-[#333]">
+      <pre className="!bg-[#0d1117] p-4 rounded-lg overflow-x-auto mb-4 border border-[#30363d]">
         {children}
       </pre>
     ),
