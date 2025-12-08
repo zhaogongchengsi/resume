@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { ThemeToggle } from '../components/ThemeToggle'
-import { LanguageToggle } from '../components/LanguageToggle'
-import { getAllPosts } from '../lib/posts'
+import { ThemeToggle } from '../../components/ThemeToggle'
+import { LanguageToggle } from '../../components/LanguageToggle'
+import { getAllPosts } from '../../lib/posts'
 import type { Metadata } from 'next'
 import {getTranslations} from 'next-intl/server';
 

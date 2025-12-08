@@ -1,9 +1,11 @@
+"use client"
+
 import { useState, useEffect } from 'react'
-import Chrome404 from './components/Chrome404'
-import NetworkError from './components/NetworkError'
-import DnsError from './components/DnsError'
-import SslError from './components/SslError'
-import ServerError from './components/ServerError'
+import Chrome404 from '../components/Chrome404'
+import NetworkError from '../components/NetworkError'
+import DnsError from '../components/DnsError'
+import SslError from '../components/SslError'
+import ServerError from '../components/ServerError'
 
 const errorComponents = [
   Chrome404,
