@@ -9,69 +9,51 @@ export interface BlogPost {
   title: string
   description: string
   date: string
-  content: string
 }
 
 export function getAllPosts(): BlogPost[] {
   const fileNames = fs.readdirSync(postsDirectory)
   const allPosts = fileNames
-    .filter((fileName) => fileName.endsWith('.md'))
+    .filter((fileName) => fileName.endsWith('.mdx'))
     .map((fileName) => {
-      const slug = fileName.replace(/\.md$/, '')
+      const slug = fileName.replace(/\.mdx$/, '')
       const fullPath = path.join(postsDirectory, fileName)
       const fileContents = fs.readFileSync(fullPath, 'utf8')
-      const { data, content } = matter(fileContents)
-
-      // 从内容中提取标题和描述
-      const lines = content.trim().split('\n')
-      const title = lines[0]?.replace(/^#\s*/, '') || slug
-      const description = lines
-        .slice(1)
-        .find((line) => line.trim() && !line.startsWith('#'))
-        ?.substring(0, 150) || ''
+      const { data } = matter(fileContents)
 
       return {
         slug,
-        title,
-        description,
+        title: data.title || slug,
+        description: data.description || '',
         date: data.date || '2024',
-        content,
       }
     })
 
   return allPosts.sort((a, b) => (a.date > b.date ? -1 : 1))
 }
 
-export function getPostBySlug(slug: string): BlogPost | null {
-  try {
-    const fullPath = path.join(postsDirectory, `${slug}.md`)
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-    const { data, content } = matter(fileContents)
+export function getAllPostSlugs() {
+  const fileNames = fs.readdirSync(postsDirectory)
+  return fileNames
+    .filter((fileName) => fileName.endsWith('.mdx'))
+    .map((fileName) => ({
+      slug: fileName.replace(/\.mdx$/, ''),
+    }))
+}
 
-    const lines = content.trim().split('\n')
-    const title = lines[0]?.replace(/^#\s*/, '') || slug
-    const description = lines
-      .slice(1)
-      .find((line) => line.trim() && !line.startsWith('#'))
-      ?.substring(0, 150) || ''
+export function getPostMetadata(slug: string) {
+  try {
+    const fullPath = path.join(postsDirectory, `${slug}.mdx`)
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const { data } = matter(fileContents)
 
     return {
       slug,
-      title,
-      description,
+      title: data.title || slug,
+      description: data.description || '',
       date: data.date || '2024',
-      content,
     }
   } catch (error) {
     return null
   }
-}
-
-export function getAllPostSlugs() {
-  const fileNames = fs.readdirSync(postsDirectory)
-  return fileNames
-    .filter((fileName) => fileName.endsWith('.md'))
-    .map((fileName) => ({
-      slug: fileName.replace(/\.md$/, ''),
-    }))
 }

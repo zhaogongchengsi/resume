@@ -1,3 +1,56 @@
+import Link from 'next/link'
+import { ThemeToggle } from '@/app/components/ThemeToggle'
+import { LanguageToggle } from '@/app/components/LanguageToggle'
+import { getTranslations } from 'next-intl/server'
+import type { Metadata } from 'next'
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: '使用JavaScript实现简单洋葱模型的记录 | Zhaozunhong',
+    description: '洋葱模型是一种中间件的设计模式，它的核心思想是将各种操作的处理分为前置处理、后置处理和中间处理三个阶段',
+    keywords: ['JavaScript', 'Onion Model', 'Middleware', 'blog', 'zhaozunhong'],
+    authors: [{ name: 'Zhaozunhong' }],
+    openGraph: {
+      title: '使用JavaScript实现简单洋葱模型的记录',
+      description: '洋葱模型是一种中间件的设计模式，它的核心思想是将各种操作的处理分为前置处理、后置处理和中间处理三个阶段',
+      type: 'article',
+      publishedTime: '2024-01-15',
+    },
+  }
+}
+
+export default async function OnionBlogPost() {
+  const t = await getTranslations('blog')
+  
+  return (
+    <div className="min-h-screen bg-white dark:bg-[#161616]">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <header className="mb-8">
+          <div className="flex items-center justify-between mb-8">
+            <Link
+              href="/blog"
+              className="text-sm text-[#666] hover:text-[#333] dark:text-[#999] dark:hover:text-[#bdc1c6] transition-colors"
+            >
+              ← {t('backToBlog')}
+            </Link>
+            <div className="flex items-center gap-3">
+              <LanguageToggle />
+              <ThemeToggle />
+            </div>
+          </div>
+        </header>
+
+        <article className="prose prose-zinc dark:prose-invert max-w-none">
+          <MDXContent />
+        </article>
+      </div>
+    </div>
+  )
+}
+
+function MDXContent() {
+  return (
+    <>
 # 使用JavaScript实现简单洋葱模型的记录
 
 ## 什么是洋葱模型
@@ -8,7 +61,6 @@
 ### 话不多说直接上测试
 
 ```typescript
-
 it('use', () => {
   const onion = new Onion()
   const fn = async (ctx: any, next: () => Promise<void>) => {
@@ -18,7 +70,6 @@ it('use', () => {
   onion.use(fn)
   expect(onion.middlewares.length).toBe(1)
 })
-
 ```
 
 ### 实现以及一些初始化
@@ -41,7 +92,6 @@ class Onion<T extends any> {
   this.middlewares.push(fn)
  }
 }
-
 ```
 
 这些都是一些基本操作，提供一个 use 方法用来注册中间件 ，一个 middlewares 数组用来存储中间件。
@@ -104,3 +154,6 @@ class Onion<T extends any> {
 ```
 
 具体实现的仓库地址：[onion](https://github.com/zhaogongchengsi/onion)
+    </>
+  )
+}

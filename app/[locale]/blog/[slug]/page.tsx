@@ -1,58 +1,25 @@
 import { notFound } from 'next/navigation'
-import { getPostBySlug, getAllPostSlugs } from '@/app/lib/posts'
 import Link from 'next/link'
 import { ThemeToggle } from '@/app/components/ThemeToggle'
 import { LanguageToggle } from '@/app/components/LanguageToggle'
-import { MarkdownContent } from '@/app/components/MarkdownContent'
 import type { Metadata } from 'next'
-import {getTranslations} from 'next-intl/server';
+import { getTranslations } from 'next-intl/server'
 
 interface Props {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string; locale: string }>
 }
 
-export async function generateStaticParams() {
-  const posts = getAllPostSlugs()
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params
-  const post = getPostBySlug(slug)
-
-  if (!post) {
-    return {
-      title: 'Post Not Found',
-    }
-  }
-
-  return {
-    title: `${post.title} | Zhaozunhong`,
-    description: post.description,
-    keywords: [post.title, 'blog', 'zhaozunhong', 'programming', 'web development'],
-    authors: [{ name: 'Zhaozunhong' }],
-    openGraph: {
-      title: post.title,
-      description: post.description,
-      type: 'article',
-      publishedTime: post.date,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: post.title,
-      description: post.description,
-    },
-  }
-}
 
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params
-  const post = getPostBySlug(slug)
-  const t = await getTranslations('blog');
+  const t = await getTranslations('blog')
 
-  if (!post) {
+  // 动态导入 MDX 文件
+  let MDXContent
+  try {
+    MDXContent = (await import(`@/content/${slug}.mdx`)).default
+    console.log({MDXContent})
+  } catch (error) {
     notFound()
   }
 
@@ -73,14 +40,9 @@ export default async function BlogPost({ params }: Props) {
             </div>
           </div>
         </header>
-        
-        <h1 className="text-4xl font-bold mb-4 text-[#333] dark:text-[#bdc1c6]">
-          {post.title}
-        </h1>
-        <time className="text-sm text-[#999] dark:text-[#666]">{post.date}</time>
 
-        <article className="prose prose-zinc dark:prose-invert max-w-none prose-pre:bg-[#f5f5f5] dark:prose-pre:bg-[#1e1e1e] prose-pre:border prose-pre:border-[#e5e5e5] dark:prose-pre:border-[#333]">
-          <MarkdownContent content={post.content} />
+        <article className="prose prose-zinc dark:prose-invert max-w-none">
+          <MDXContent />
         </article>
       </div>
     </div>
