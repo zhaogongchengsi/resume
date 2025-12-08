@@ -3,6 +3,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 import createMDX from '@next/mdx'
 import rehypeHighlight from 'rehype-highlight'
 import remarkGfm from 'remark-gfm'
+import remarkFrontmatter from 'remark-frontmatter'
 
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
@@ -16,7 +17,7 @@ const nextConfig: NextConfig = {
 
 const withMDX = createMDX({
   options: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkFrontmatter, remarkGfm],
     rehypePlugins: [rehypeHighlight],
   },
 })

@@ -102,6 +102,18 @@ export default async function BlogPost({ params }: Props) {
               <ThemeToggle />
             </div>
           </div>
+          
+          {/* <div className="mb-8">
+            <h1 className="text-4xl font-bold mb-4 text-[#333] dark:text-[#bdc1c6]">
+              {post.title}
+            </h1>
+            <div className="flex items-center gap-4 text-sm text-[#999] dark:text-[#666]">
+              <time>{post.date}</time>
+            </div>
+            <p className="mt-4 text-[#666] dark:text-[#999] leading-relaxed">
+              {post.description}
+            </p>
+          </div> */}
         </header>
 
         <article className="prose prose-zinc dark:prose-invert max-w-none">
