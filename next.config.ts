@@ -12,8 +12,6 @@ const nextConfig: NextConfig = {
   // SEO 优化
   poweredByHeader: false,
   compress: true,
-  // 生成静态页面
-  output: 'standalone',
 }
 
 export default withNextIntl(nextConfig)
