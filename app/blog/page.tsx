@@ -1,16 +1,23 @@
 import Link from 'next/link'
 import { ThemeToggle } from '../components/ThemeToggle'
+import { LanguageToggle } from '../components/LanguageToggle'
 import { getAllPosts } from '../lib/posts'
 import type { Metadata } from 'next'
+import {getTranslations} from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: '博客 | Zhaozunhong',
-  description: '记录技术学习与思考',
-  keywords: ['blog', 'zhaozunhong', 'programming', 'web development', 'tech'],
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('blog');
+  
+  return {
+    title: `${t('title')} | Zhaozunhong`,
+    description: t('description'),
+    keywords: ['blog', 'zhaozunhong', 'programming', 'web development', 'tech'],
+  }
 }
 
-export default function BlogPage() {
+export default async function BlogPage() {
   const blogPosts = getAllPosts()
+  const t = await getTranslations('blog');
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#161616]">
@@ -21,12 +28,15 @@ export default function BlogPage() {
               href="/" 
               className="text-sm text-[#666] hover:text-[#333] dark:text-[#999] dark:hover:text-[#bdc1c6] transition-colors"
             >
-              ← 返回首页
+              ← {t('backToHome')}
             </Link>
-            <ThemeToggle />
+            <div className="flex items-center gap-3">
+              <LanguageToggle />
+              <ThemeToggle />
+            </div>
           </div>
-          <h1 className="text-4xl font-bold mb-4 text-[#333] dark:text-[#bdc1c6]">博客</h1>
-          <p className="text-[#666] dark:text-[#999]">记录技术学习与思考</p>
+          <h1 className="text-4xl font-bold mb-4 text-[#333] dark:text-[#bdc1c6]">{t('title')}</h1>
+          <p className="text-[#666] dark:text-[#999]">{t('description')}</p>
         </header>
 
         <div className="space-y-8">

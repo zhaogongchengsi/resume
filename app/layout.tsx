@@ -1,3 +1,5 @@
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages, getLocale} from 'next-intl/server';
 import type { Metadata } from 'next'
 import './globals.css'
 
@@ -7,13 +9,16 @@ export const metadata: Metadata = {
   keywords: ['zhaozunhong', 'Resume', 'ZZH Resume', 'blog', 'zzh blog', 'Vue', 'React', 'Web Development', 'open source development'],
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="zh-CN" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -41,7 +46,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   )
 }

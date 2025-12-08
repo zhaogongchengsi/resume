@@ -1,0 +1,51 @@
+{
+  "chrome404": {
+    "title": "此网页无法正常运作",
+    "description": "目前无法处理此请求。",
+    "errorCode": "HTTP ERROR 404"
+  },
+  "networkError": {
+    "title": "无法访问此网站",
+    "description": "的响应时间过长。",
+    "suggestions": "请试试以下办法：",
+    "checkConnection": "检查网络连接",
+    "checkProxy": "检查代理服务器和防火墙",
+    "runDiagnostics": "运行 Windows 网络诊断",
+    "errorCode": "ERR_CONNECTION_TIMED_OUT"
+  },
+  "dnsError": {
+    "title": "找不到 {domain} 的服务器 DNS 地址",
+    "suggestions": "以下是一些建议:",
+    "checkTypos": "检查是否存在拼写错误:",
+    "checkConnection": "如果连接使用了代理服务器，请检查代理设置",
+    "checkDns": "检查防火墙或杀毒软件配置",
+    "reload": "重新加载",
+    "errorCode": "DNS_PROBE_FINISHED_NXDOMAIN"
+  },
+  "sslError": {
+    "title": "您的连接不是私密连接",
+    "description": "攻击者可能会试图从 {domain} 窃取您的信息（例如：密码、通讯内容或信用卡信息）。",
+    "back": "返回安全页面",
+    "advanced": "高级",
+    "advancedInfo": "此服务器无法证明它是 {domain}；您计算机的操作系统不信任此服务器的安全证书。这可能是因为配置有误或有攻击者拦截了您的连接。",
+    "errorCode": "NET::ERR_CERT_COMMON_NAME_INVALID"
+  },
+  "serverError": {
+    "title": "内部服务器错误",
+    "description": "服务器遇到了一个意外情况，导致它无法完成对请求的处理。",
+    "detail": "这是一个服务器端错误，不是客户端的问题。",
+    "retry": "重试"
+  },
+  "blog": {
+    "title": "博客",
+    "description": "记录技术学习与思考",
+    "backToHome": "返回首页",
+    "backToBlog": "返回博客列表"
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "description": "抱歉，您访问的页面不存在或已被删除",
+    "backHome": "返回首页",
+    "viewBlog": "查看博客"
+  }
+}

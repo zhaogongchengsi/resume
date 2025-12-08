@@ -1,0 +1,51 @@
+{
+  "chrome404": {
+    "title": "This site can't be reached",
+    "description": "is currently unable to handle this request.",
+    "errorCode": "HTTP ERROR 404"
+  },
+  "networkError": {
+    "title": "This site can't be reached",
+    "description": "took too long to respond.",
+    "suggestions": "Try:",
+    "checkConnection": "Checking the connection",
+    "checkProxy": "Checking the proxy and the firewall",
+    "runDiagnostics": "Running Windows Network Diagnostics",
+    "errorCode": "ERR_CONNECTION_TIMED_OUT"
+  },
+  "dnsError": {
+    "title": "{domain}'s server IP address could not be found",
+    "suggestions": "Here are some suggestions:",
+    "checkTypos": "Check for typos in:",
+    "checkConnection": "If you use a proxy server, check your proxy settings",
+    "checkDns": "Check your firewall or antivirus configuration",
+    "reload": "Reload",
+    "errorCode": "DNS_PROBE_FINISHED_NXDOMAIN"
+  },
+  "sslError": {
+    "title": "Your connection is not private",
+    "description": "Attackers might be trying to steal your information from {domain} (for example, passwords, messages, or credit cards).",
+    "back": "Back to safety",
+    "advanced": "Advanced",
+    "advancedInfo": "This server could not prove that it is {domain}; its security certificate is not trusted by your computer's operating system. This may be caused by a misconfiguration or an attacker intercepting your connection.",
+    "errorCode": "NET::ERR_CERT_COMMON_NAME_INVALID"
+  },
+  "serverError": {
+    "title": "Internal Server Error",
+    "description": "The server encountered an unexpected condition that prevented it from fulfilling the request.",
+    "detail": "This is a server-side error, not a client issue.",
+    "retry": "Retry"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Record technical learning and thinking",
+    "backToHome": "Back to Home",
+    "backToBlog": "Back to Blog List"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist or has been removed",
+    "backHome": "Back to Home",
+    "viewBlog": "View Blog"
+  }
+}
