@@ -16,8 +16,8 @@ const posts: Record<string, any> = {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'zhaozunhong.me' // 替换为你的域名
 
-  const blogRoutes = posts.map((post: any) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+  const blogRoutes = Object.keys(posts).map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
