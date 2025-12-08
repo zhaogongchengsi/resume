@@ -9,16 +9,79 @@ interface Props {
   params: Promise<{ slug: string; locale: string }>
 }
 
+interface BlogPostMeta {
+  title: string
+  date: string
+  description: string
+}
+
+const posts: Record<string, BlogPostMeta> = {
+  onion: {
+    title: '使用JavaScript实现简单洋葱模型的记录',
+    date: '2024-01-15',
+    description: '洋葱模型是一种中间件的设计模式，它的核心思想是将各种操作的处理分为前置处理、后置处理和中间处理三个阶段',
+  },
+  unasarmor: {
+    title: '如何破解 asarmor 打包后的 asar 文件',
+    date: '2024-02-20',
+    description: '在使用 electron 打包项目时，我们通常会使用 asarmor 来加密 asar 文件，但是在某些情况下，我们需要对 asar 文件进行还原',
+  },
+}
+
+export async function generateStaticParams() {
+  const locales = ['zh', 'en']
+  const slugs = Object.keys(posts)
+  
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({
+      locale,
+      slug,
+    }))
+  )
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const post = posts[slug]
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+    }
+  }
+
+  return {
+    title: `${post.title} | Zhaozunhong`,
+    description: post.description,
+    keywords: [post.title, 'blog', 'zhaozunhong', 'programming', 'web development'],
+    authors: [{ name: 'Zhaozunhong' }],
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: 'article',
+      publishedTime: post.date,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+    },
+  }
+}
 
 export default async function BlogPost({ params }: Props) {
   const { slug } = await params
+  const post = posts[slug]
   const t = await getTranslations('blog')
+
+  if (!post) {
+    notFound()
+  }
 
   // 动态导入 MDX 文件
   let MDXContent
   try {
     MDXContent = (await import(`@/content/${slug}.mdx`)).default
-    console.log({MDXContent})
   } catch (error) {
     notFound()
   }

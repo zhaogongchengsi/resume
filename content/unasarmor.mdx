@@ -1,56 +1,9 @@
-import Link from 'next/link'
-import { ThemeToggle } from '@/app/components/ThemeToggle'
-import { LanguageToggle } from '@/app/components/LanguageToggle'
-import { getTranslations } from 'next-intl/server'
-import type { Metadata } from 'next'
+---
+title: '如何破解 asarmor 打包后的 asar 文件'
+date: '2024-02-20'
+description: '在使用 electron 打包项目时，我们通常会使用 asarmor 来加密 asar 文件，但是在某些情况下，我们需要对 asar 文件进行还原'
+---
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: '如何破解 asarmor 打包后的 asar 文件 | Zhaozunhong',
-    description: '在使用 electron 打包项目时，我们通常会使用 asarmor 来加密 asar 文件，但是在某些情况下，我们需要对 asar 文件进行还原',
-    keywords: ['Electron', 'asarmor', 'asar', 'blog', 'zhaozunhong'],
-    authors: [{ name: 'Zhaozunhong' }],
-    openGraph: {
-      title: '如何破解 asarmor 打包后的 asar 文件',
-      description: '在使用 electron 打包项目时，我们通常会使用 asarmor 来加密 asar 文件，但是在某些情况下，我们需要对 asar 文件进行还原',
-      type: 'article',
-      publishedTime: '2024-02-20',
-    },
-  }
-}
-
-export default async function UnasarmorBlogPost() {
-  const t = await getTranslations('blog')
-  
-  return (
-    <div className="min-h-screen bg-white dark:bg-[#161616]">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <header className="mb-8">
-          <div className="flex items-center justify-between mb-8">
-            <Link
-              href="/blog"
-              className="text-sm text-[#666] hover:text-[#333] dark:text-[#999] dark:hover:text-[#bdc1c6] transition-colors"
-            >
-              ← {t('backToBlog')}
-            </Link>
-            <div className="flex items-center gap-3">
-              <LanguageToggle />
-              <ThemeToggle />
-            </div>
-          </div>
-        </header>
-
-        <article className="prose prose-zinc dark:prose-invert max-w-none">
-          <MDXContent />
-        </article>
-      </div>
-    </div>
-  )
-}
-
-function MDXContent() {
-  return (
-    <>
 # 如何破解 asarmor 打包后的 asar 文件
 
 ## 问题描述
@@ -129,6 +82,3 @@ super-asar extract app.asar header.json -s 213123213
 解压所有的文件。
 
 这样就可以依据提取的文件头信息来解压并跳过无用的文件信息。从而绕过 asarmor 的守护
-    </>
-  )
-}
